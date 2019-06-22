@@ -25,84 +25,41 @@ class AppBar extends React.Component {
         contactus: false
       }
     }
-
-    this.handleContactusClick - this.handleContactusClick.bind()
-    this.handleWeatherClick - this.handleWeatherClick.bind()
-    this.handleHomeClick - this.handleHomeClick.bind()
-    this.handleRentalClick - this.handleRentalClick.bind()
-    this.handleContactusClick - this.handleContactusClick.bind()
   }
 
-
-  handleLocationClick() {
-    this.setState({ 
-      selected: { 
-        location: true
+  handleClick(type) {
+    this.setState({ selected: {
+      [type]: true 
       }
     })
   }
-  handleWeatherClick() {
-    this.setState({ 
-      selected: { 
-        weather: true
-      }
-    })
-  }
-  handleHomeClick() {
-    this.setState({ 
-      selected: { 
-        home: true
-      }
-    })
-  }
-  handleRentalClick() {
-    this.setState({ 
-      selected: { 
-        rental: true
-      }
-    })
-  }
-  handleContactusClick() {
-    this.setState({ 
-      selected: { 
-        contactus: true
-      }
-    })
-  }
-  // handleClick(type) {
-  //   console.log(this.state.selected[type])
-  //   this.setState({ selected: {
-  //     [type]: true 
-  //     }
-  //   })
-  // }
 
   render() {
     const { selected: { location, weather, home, rental, contactus} } = this.state
     return (
       <div className="app-bar-main-panel">
     <Link to="/location">
-      <div className="app-bar-location" onClick={() => this.handleLocationClick()}>
+      <div className="app-bar-location" onClick={() => this.handleClick('location')}>
         {location ? <LocationColorIcon /> : <LocationIcon />}
         <p className="app-bar-desc location">LOCATION</p>
       </div>
     </Link>
 
     <Link to="/weather">
-    <div className="app-bar-weather" onClick={() => this.handleWeatherClick()}>
+    <div className="app-bar-weather" onClick={() => this.handleClick('weather')}>
     {weather ? <WeatherColorIcon /> : <WeatherIcon />}
         <p className="app-bar-desc location">WEATHER</p>
     </div>
     </Link>
 
-    <Link to="/home" onClick={() => this.handleHomeClick()}>
+    <Link to="/home" onClick={() => this.handleClick('home')}>
     <div className="app-bar-home">
     <img alt="aenona"src={Logo}></img>
     </div>
     </Link>
 
     <Link to="/rental">
-    <div className="app-bar-rental" onClick={() => this.handleRentalClick()}>
+    <div className="app-bar-rental" onClick={() => this.handleClick('rental')}>
     {rental ? <KitesurfColorIcon /> : <KitesurfIcon />}
         <p className="app-bar-desc location">RENTAL</p>
     </div>
