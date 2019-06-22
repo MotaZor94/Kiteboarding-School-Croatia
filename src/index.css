@@ -1,3 +1,5 @@
+@import "./components/AppBar/AppBar.css";
+
 .main-wrap-horizontal {
     display: flex;
     flex-direction: row;
