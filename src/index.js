@@ -13,13 +13,14 @@ const App = () => {
   return (
     <Router>
       <AppBar />
+{/*       
       <SwipeableRoutes className="main-wrap-horizontal">
-        {/* <div style={mainAppStyle}> */}
+        
         <Route path="/weather" component={Weather} />
         <Route path="/home" component={Main} />
         <Route path="/rental" component={Rental} />
-        {/* </div> */}
-      </SwipeableRoutes>
+        
+      </SwipeableRoutes> */}
     </Router>
   )
 };

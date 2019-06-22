@@ -38,6 +38,26 @@ module.exports = {
           { loader: 'css-loader', options: { importLoaders: 1 } },
           'postcss-loader',
         ]
+      },
+      {
+        test: /\.svg$/,
+        use: {
+            loader: 'react-svg-loader',
+            options: {}
+        }
+      },
+      {
+        test: /\.(gif|png|jpe?g)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true, // webpack@1.x
+              disable: true, // webpack@2.x and newer
+            },
+          },
+        ],
       }
     ]
   },
