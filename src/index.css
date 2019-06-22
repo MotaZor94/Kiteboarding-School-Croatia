@@ -1,6 +1,13 @@
-
-
-div {
-    font-size: 2em;
-    display: flex; 
+.main-wrap-horizontal {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: scroll;
+    align-content: stretch;
+    justify-content: flex-start;
+    scroll-snap-type: x mandatory !important;
+    -webkit-scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch;
 }

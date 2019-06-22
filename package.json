@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack-dev-server --open --hot --mode production",
+    "start": "webpack-dev-server --open --hot --mode development",
     "build": "webpack --mode production"
   },
   "keywords": [],
@@ -35,8 +35,7 @@
     "postcss-preset-env": "^6.6.0",
     "sugarss": "^2.0.0",
     "whatwg-fetch": "^3.0.0",
-    "react-snap-scroll": "0.0.5",
-    "react-swipeable-routes": "^0.6.0",
-    "react-router-dom": "^5.0.1"
+    "react-router-dom": "^5.0.1",
+    "react-swipeable-routes": "^0.6.0"
   }
 }

@@ -1,8 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
-require("./index.css");
+
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import SwipeableRoutes from 'react-swipeable-routes';
+
+import Main from './components/pages/main/main'
+import Weather from './components/pages/weather/weather'
+import Rental from './components/pages/rental/rental'
+import AppBar from './components/AppBar/AppBar'
+import './index.css'
 const App = () => {
-  return <div>Hello React,Webpack 4 & Babel 7!</div>;
+  return (
+    <Router>
+      <AppBar />
+      <SwipeableRoutes className="main-wrap-horizontal">
+        {/* <div style={mainAppStyle}> */}
+        <Route path="/weather" component={Weather} />
+        <Route path="/home" component={Main} />
+        <Route path="/rental" component={Rental} />
+        {/* </div> */}
+      </SwipeableRoutes>
+    </Router>
+  )
 };
 
 
