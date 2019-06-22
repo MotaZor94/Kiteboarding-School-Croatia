@@ -2,6 +2,7 @@ import React from 'react';
 
 import fetchRequest from '../../fetch/fetchRequest';
 
+import WeatherDataPanel from '../weather/WeatherDataPanel'
 
 class Weather extends React.Component {
   constructor(props) {
@@ -40,7 +41,14 @@ class Weather extends React.Component {
     console.log('state: ', data);
     console.log(data && data.currently);
     return (
-      <div className="weather">
+      <div className="weather-wrap">
+        <WeatherDataPanel
+          temperature={24}
+          pressure={54}
+          humidity={80}
+          wind={9}
+          weatherState={'SUNNY'}
+        />
         <h1 style={{ margin: '0' }}>weather</h1>
         <h3>
 temp:
