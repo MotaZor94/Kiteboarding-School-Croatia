@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* .app-bar-main-panel {
+=======
+.app-bar-main-panel {
+>>>>>>> bcc4531202a891382fcd1b88b1baf32616ad81af
     display: flex;
     position: fixed;
     width: 100vw;
@@ -52,4 +56,8 @@ a {
 
 .app-bar-desc {
     margin: 0;
+<<<<<<< HEAD
 } */
+=======
+}
+>>>>>>> bcc4531202a891382fcd1b88b1baf32616ad81af
