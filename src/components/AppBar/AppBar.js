@@ -25,6 +25,8 @@ class AppBar extends React.Component {
         contactus: false
       }
     }
+
+    this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick(type) {
@@ -38,40 +40,40 @@ class AppBar extends React.Component {
     const { selected: { location, weather, home, rental, contactus} } = this.state
     return (
       <div className="app-bar-main-panel">
-    <Link to="/location">
-      <div className="app-bar-location" onClick={() => this.handleClick('location')}>
-        {location ? <LocationColorIcon /> : <LocationIcon />}
-        <p className="app-bar-desc location">LOCATION</p>
+        <Link key="locationBtn" to="/location">
+          <div className="app-bar-icon-wrap location-icon" onClick={() => this.handleClick('location')}>
+            {location ? <LocationColorIcon className="app-bar-icon"/> : <LocationIcon fill="#A4A4A4" className="app-bar-icon"/>}
+            <p style={location ? { color:"#1F95B9" } : { color:"#A4A4A4" }} className ="app-bar-d e s c  location">LOCATION</p>
+          </div>
+        </Link>
+
+        <Link key="weatherBtn" to="/weather">
+          <div className="app-bar-icon-wrap weather-icon" onClick={() => this.handleClick('weather')}>
+            {weather ? <WeatherColorIcon className="app-bar-icon" /> : <WeatherIcon fill="#A4A4A4" className="app-bar-icon"/>}
+            <p style={ weather ? { color:"#1F95B9" } : { color:"#A4A4A4" }} className="app-bar-desc weather">WEATHER</p>
+          </div>
+        </Link>
+
+        <Link key="homeBtn" to="/home" onClick={() => this.handleClick('home')}>
+          <div className="app-bar-icon-wrap home-icon">
+            <img alt="aenona"src={Logo} className="app-bar-icon home-png"></img>
+          </div>
+        </Link>
+
+        <Link key="rentalBtn" to="/rental">
+          <div className="app-bar-icon-wrap rental-icon" onClick={() => this.handleClick('rental')}>
+            {rental ? <KitesurfColorIcon className="app-bar-icon"/> : <KitesurfIcon fill="#A4A4A4" className="app-bar-icon"/>}
+            <p style={ rental ? { color:"#1F95B9" } : { color:"#A4A4A4" }} className="app-bar-desc rental">RENTAL</p>
+          </div>
+        </Link>
+
+        <Link key="aboutusBtn" to="/aboutus">
+          <div className="app-bar-icon-wrap about-us-icon">
+            <AboutusIcon fill="#A4A4A4" className="app-bar-icon" /> 
+            <p style={ contactus ? { color:"#1F95B9" } : { color:"#A4A4A4" }} className="app-bar-desc aboutus">ABOUT US</p>
+          </div>
+        </Link>  
       </div>
-    </Link>
-
-    <Link to="/weather">
-    <div className="app-bar-weather" onClick={() => this.handleClick('weather')}>
-    {weather ? <WeatherColorIcon /> : <WeatherIcon />}
-        <p className="app-bar-desc location">WEATHER</p>
-    </div>
-    </Link>
-
-    <Link to="/home" onClick={() => this.handleClick('home')}>
-    <div className="app-bar-home">
-    <img alt="aenona"src={Logo}></img>
-    </div>
-    </Link>
-
-    <Link to="/rental">
-    <div className="app-bar-rental" onClick={() => this.handleClick('rental')}>
-    {rental ? <KitesurfColorIcon /> : <KitesurfIcon />}
-        <p className="app-bar-desc location">RENTAL</p>
-    </div>
-    </Link>
-
-    <Link to="/aboutus">
-    <div className="app-bar-about-us">
-    <AboutusIcon /> 
-        <p className="app-bar-desc location">ABOUT US</p>
-    </div>
-    </Link>  
-  </div>
     )
   }
 }
