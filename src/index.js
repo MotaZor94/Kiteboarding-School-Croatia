@@ -8,6 +8,8 @@ import Main from './components/pages/main/main'
 import Weather from './components/pages/weather/weather'
 import Rental from './components/pages/rental/rental'
 import AppBar from './components/AppBar/AppBar'
+
+import MainImage from './components/MainImage/MainImage'
 import './index.css'
 const App = () => {
   return (
@@ -17,7 +19,9 @@ const App = () => {
       <SwipeableRoutes className="main-wrap-horizontal">
         
          <Route path="/weather" component={Weather} />
+         <Route path="/weather" component={MainImage} />
          <Route path="/home" component={Main} />
+         <Route path="/home" component={MainImage} />
          <Route path="/rental" component={Rental} />
         
       </SwipeableRoutes>

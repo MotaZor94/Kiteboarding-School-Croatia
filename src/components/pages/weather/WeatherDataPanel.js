@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 export class WeatherDataPanel extends Component {
-    render({ temperature, pressure, humidity, windSpeed, weatherState}) {
+    render({ temperature, pressure, humidity, windSpeed, weatherState }) {
         return (
             <div className="weather-data-panel">
 
@@ -32,4 +32,4 @@ export class WeatherDataPanel extends Component {
     }
 }
 
-export default weatherDataPanel
+export default WeatherDataPanel

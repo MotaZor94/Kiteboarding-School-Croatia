@@ -17,7 +17,6 @@ class Weather extends React.Component {
   async componentDidMount() {
     try {
       const data = await fetchRequest('/darksky');
-      console.log('data: ', data);
       this.setState({ data, loaded: true });
     } catch (error) {
       console.log(error);
@@ -25,8 +24,8 @@ class Weather extends React.Component {
   }
 
   prepareWeatherCard() {
-    const { data } = this.state;
-    const result = data.current.temperature;
+    // const { data } = this.state;
+    // const result = data.current.temperature;
   }
 
 
@@ -38,23 +37,10 @@ class Weather extends React.Component {
 
   render() {
     const { data, loaded } = this.state;
-    console.log('state: ', data);
-    console.log(data && data.currently);
+  
     return (
       <div className="weather-wrap">
-        <WeatherDataPanel
-          temperature={24}
-          pressure={54}
-          humidity={80}
-          wind={9}
-          weatherState={'SUNNY'}
-        />
-        <h1 style={{ margin: '0' }}>weather</h1>
-        <h3>
-temp:
-          {' '}
-          {loaded && data.currently.temperature}
-        </h3>
+        {/* <WeatherDataPanel temperature={24} pressure={54} humidity={80} windSpeed={9} weatherState='SUNNY'/> */}
       </div>
     );
   }
