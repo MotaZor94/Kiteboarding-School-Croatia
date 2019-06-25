@@ -1,5 +1,10 @@
 @import "./components/AppBar/AppBar.css";
+@import "./components/HeroSection/HeroSection.css";
 
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
 .main-wrap-horizontal {
     display: flex;
     flex-direction: row;

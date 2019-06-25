@@ -32,4 +32,4 @@ export class WeatherDataPanel extends Component {
     }
 }
 
-export default weatherDataPanel
+export default WeatherDataPanel

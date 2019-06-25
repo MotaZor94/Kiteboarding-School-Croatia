@@ -38,7 +38,7 @@ class AppBar extends React.Component {
     const { selected: { location, weather, home, rental, contactus} } = this.state
     return (
       <div className="app-bar-main-panel">
-    <Link to="/location">
+    <Link to="/location" >
       <div className="app-bar-icon-wrap location-icon" onClick={() => this.handleClick('location')}>
         {location ? <LocationColorIcon className="app-bar-icon"/> : <LocationIcon fill="#A4A4A4" className="app-bar-icon"/>}
         <p style={location ? {color:"#1F95B9"}:{color:"#A4A4A4"}} className="app-bar-desc location">LOCATION</p>

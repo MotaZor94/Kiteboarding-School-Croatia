@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack-dev-server --open --hot --mode development PORT=5000",
+    "start": "webpack-dev-server --port 5000 --hot --host 10.0.0.3",
     "build": "webpack --mode production"
   },
   "keywords": [],
@@ -28,6 +28,7 @@
     "react-svg-loader": "^3.0.3",
     "style-loader": "^0.23.1",
     "svg-inline-loader": "^0.8.0",
+    "url-loader": "^2.0.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
@@ -37,10 +38,12 @@
     "astroturf": "^0.9.6",
     "cssnano": "^4.1.10",
     "postcss-import": "^12.0.1",
+    "postcss-inline-svg": "^4.0.0",
     "postcss-preset-env": "^6.6.0",
     "react-router-dom": "^5.0.1",
     "react-swipeable-routes": "^0.6.0",
     "sugarss": "^2.0.0",
+    "svg-url-loader": "^2.3.3",
     "whatwg-fetch": "^3.0.0"
   }
 }

@@ -13,6 +13,7 @@
     background-color: white;
     box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.25);
     border-radius: 0px 0px 80px 80px;
+    z-index: 20;
 }
 .app-bar-icon-wrap {
     display: flex;
@@ -22,7 +23,6 @@
 }
 
 .home-icon {
-    position: absolute;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -34,7 +34,7 @@
     background-color: white;
     height: 12vw;
     border: 2px solid #28B3DC;
-    box-shadow: 1px 1px 2px 0 rgba(0,0,0,.25);
+    box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.25);
 }
 .app-bar-icon {
     width: 8vw;

@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import Sunny from '../../images/sunny.png'
 
-export class MainImage extends Component {
-    render(props) {
+class MainImage extends Component {
+    render() {
         return (
-            <div>
-                
-            </div>
+            <>
+              <img className="hero" alt="sunny" src={Sunny}></img> 
+            </>
         )
     }
 }
