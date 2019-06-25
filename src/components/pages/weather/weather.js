@@ -24,12 +24,9 @@ class Weather extends React.Component {
   }
 
   prepareWeatherCard() {
-<<<<<<< HEAD
     // const { data } = this.state;
     // const result = data.current.temperature;
-=======
-    const { data } = this.state;
->>>>>>> testbranch
+    // const { data } = this.state;
   }
 
 
@@ -44,23 +41,7 @@ class Weather extends React.Component {
   
     return (
       <div className="weather-wrap">
-<<<<<<< HEAD
         {/* <WeatherDataPanel temperature={24} pressure={54} humidity={80} windSpeed={9} weatherState='SUNNY'/> */}
-=======
-        {/* <WeatherDataPanel
-          temperature={24}
-          pressure={54}
-          humidity={80}
-          wind={9}
-          weatherState={'SUNNY'}
-        />
-        <h1 style={{ margin: '0' }}>weather</h1>
-        <h3>
-temp:
-          {' '}
-          {loaded && data.currently.temperature}
-        </h3> */}
->>>>>>> testbranch
       </div>
     );
   }
