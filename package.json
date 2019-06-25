@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack-dev-server --port 5000 --hot --host 10.0.0.4",
+    "start": "webpack-dev-server --port 5000 --hot",
     "build": "webpack --mode production"
   },
   "keywords": [],

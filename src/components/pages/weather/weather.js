@@ -26,7 +26,6 @@ class Weather extends React.Component {
   prepareWeatherCard() {
     // const { data } = this.state;
     // const result = data.current.temperature;
-    // const { data } = this.state;
   }
 
 
@@ -37,8 +36,6 @@ class Weather extends React.Component {
   // }
 
   render() {
-    const { data, loaded } = this.state;
-  
     return (
       <div className="weather-wrap">
         {/* <WeatherDataPanel temperature={24} pressure={54} humidity={80} windSpeed={9} weatherState='SUNNY'/> */}

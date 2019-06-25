@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 
 import SVG from 'react-inlinesvg' // uninstall this
 import LocationIcon from '../../images/icons/location.svg'
@@ -17,6 +18,7 @@ class AppBar extends React.Component {
     super(props)
 
     this.state = {
+      current: '',
       selected: {
         location: false,
         weather: false,
@@ -26,11 +28,31 @@ class AppBar extends React.Component {
       }
     }
 
-    this.handleClick = this.handleClick.bind(this)
+    this.handleSelection = this.handleSelection.bind(this)
   }
 
-  handleClick(type) {
-    this.setState({ selected: {
+  componentDidMount() {
+    const { pathname } = this.props.location
+    console.log(pathname)
+    const path = pathname.split('/')[1]
+    if (path === "") {
+      // this.handleSelection('home')
+    } else {
+      this.handleSelection(path)
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.location.pathname === prevProps.location.pathname) {
+      return null
+    }
+    const { pathname } = this.props.location
+    const path = pathname.split('/')[1]
+    this.handleSelection(path)
+  }
+
+  async handleSelection(type) {
+    await this.setState({ selected: {
       [type]: true 
       }
     })
@@ -38,30 +60,31 @@ class AppBar extends React.Component {
 
   render() {
     const { selected: { location, weather, home, rental, contactus} } = this.state
+
     return (
       <div className="app-bar-main-panel">
         <Link key="locationBtn" to="/location">
-          <div className="app-bar-icon-wrap location-icon" onClick={() => this.handleClick('location')}>
+          <div className="app-bar-icon-wrap location-icon" onClick={() => this.handleSelection('location')}>
             {location ? <LocationColorIcon className="app-bar-icon"/> : <LocationIcon fill="#A4A4A4" className="app-bar-icon"/>}
             <p style={location ? { color:"#1F95B9" } : { color:"#A4A4A4" }} className ="app-bar-d e s c  location">LOCATION</p>
           </div>
         </Link>
 
         <Link key="weatherBtn" to="/weather">
-          <div className="app-bar-icon-wrap weather-icon" onClick={() => this.handleClick('weather')}>
+          <div className="app-bar-icon-wrap weather-icon" onClick={() => this.handleSelection('weather')}>
             {weather ? <WeatherColorIcon className="app-bar-icon" /> : <WeatherIcon fill="#A4A4A4" className="app-bar-icon"/>}
             <p style={ weather ? { color:"#1F95B9" } : { color:"#A4A4A4" }} className="app-bar-desc weather">WEATHER</p>
           </div>
         </Link>
 
-        <Link key="homeBtn" to="/home" onClick={() => this.handleClick('home')}>
+        <Link key="homeBtn" to="/home" onClick={() => this.handleSelection('home')}>
           <div className="app-bar-icon-wrap home-icon">
             <img alt="aenona"src={Logo} className="app-bar-icon home-png"></img>
           </div>
         </Link>
 
         <Link key="rentalBtn" to="/rental">
-          <div className="app-bar-icon-wrap rental-icon" onClick={() => this.handleClick('rental')}>
+          <div className="app-bar-icon-wrap rental-icon" onClick={() => this.handleSelection('rental')}>
             {rental ? <KitesurfColorIcon className="app-bar-icon"/> : <KitesurfIcon fill="#A4A4A4" className="app-bar-icon"/>}
             <p style={ rental ? { color:"#1F95B9" } : { color:"#A4A4A4" }} className="app-bar-desc rental">RENTAL</p>
           </div>
