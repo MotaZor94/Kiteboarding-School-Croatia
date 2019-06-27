@@ -1,0 +1,62 @@
+.weather-graphic {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 18em;
+    width: 80vw;
+}
+
+@keyframes example {
+    50% {
+    }
+
+    100% {
+        left: 250px;
+    }
+}
+
+.cloud {
+    position: absolute;
+    width: 50px;
+    top: 0;
+    left: 0;
+    animation-name: example;
+    animation-duration: 15s;
+    animation-iteration-count: 4;
+    transition: linear;
+}
+
+.cloud1 {
+    position: absolute;
+    width: 50px;
+    top: 0;
+    left: 5px;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: 4;
+    transition: linear;
+}
+
+.cloud2 {
+    position: absolute;
+    width: 50px;
+    top: 60px;
+    left: 200px;
+    animation-name: example;
+    animation-duration: 7s;
+    animation-iteration-count: 4;
+    transition: linear;
+}
+
+.cloud3 {
+    position: absolute;
+    width: 50px;
+    top: 0;
+    left: 100px;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: 4;
+    transition: linear;
+}
+
+

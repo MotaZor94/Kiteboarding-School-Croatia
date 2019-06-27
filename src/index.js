@@ -9,12 +9,17 @@ import Weather from './components/pages/weather/weather'
 import Rental from './components/pages/rental/rental'
 import AppBar from './components/AppBar/AppBar'
 import MainImage from './components/MainImage/MainImage'
+import HeroSection from './components/HeroSection/HeroSection'
 import './index.css'
+
+import MainIllustration from './components/MainIllustration/MainIllustration'
 
 const App = () => {
   return (
+
     <Router>
       <Route key="appBarComp" path="/" component={AppBar} />
+      <HeroSection />
        
       <SwipeableRoutes className="main-wrap-horizontal">
         

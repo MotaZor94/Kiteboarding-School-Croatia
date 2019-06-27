@@ -3,7 +3,7 @@
     background-size: cover;
     width: 100vw;
     background-position: bottom;
-    height: 38em;
+    height: 50em;
     margin-top: -14em;
     display: flex;
     align-items: center;
@@ -11,8 +11,8 @@
     flex-direction: column;
 }
 .hero {
-    width: 99vw;
-    margin-top: 29em;
+    width: 100%;
+    /* margin-top: 10em; */
     /* margin: 0 auto; */
     padding: 0 auto;
 } 
@@ -48,4 +48,6 @@
     color: #414141;
     font-size: 0.9em;
 }
+
+
 
