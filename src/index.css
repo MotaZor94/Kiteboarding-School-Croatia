@@ -1,7 +1,11 @@
 @import "./components/AppBar/AppBar.css";
 @import "./components/HeroSection/HeroSection.css";
 @import "./components/MainImage/MainImage.css";
+<<<<<<< HEAD
 @import "./components//RentalCard/RentalCard.css";
+=======
+@import "./components/pages/weather/weather.css";
+>>>>>>> 85fade30284c044e23c33b0e705d30102eb5651a
 
 body {
     margin: 0;

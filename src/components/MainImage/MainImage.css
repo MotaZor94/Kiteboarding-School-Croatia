@@ -2,8 +2,17 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-top: 29em;
-    width: 19em;
+    margin-top: 18em;
+    width: 80vw;
+    /* filter: brightness(50%); */
+}
+
+
+.moonOrSun {
+    position: absolute;
+    width: 50px;
+    top: 0;
+    left: 0;
 }
 
 @keyframes example {
@@ -15,9 +24,9 @@
     }
 }
 
-.cloud {
+.cloud1 {
     position: absolute;
-    width: 50px;
+    width: 100px;
     top: 0;
     left: 0;
     animation-name: example;
@@ -26,37 +35,47 @@
     transition: linear;
 }
 
-.cloud1 {
-    position: absolute;
-    width: 50px;
-    top: 0;
-    left: 5px;
-    animation-name: example;
-    animation-duration: 10s;
-    animation-iteration-count: 4;
-    transition: linear;
-}
-
 .cloud2 {
     position: absolute;
-    width: 50px;
-    top: 60px;
-    left: 200px;
+    width: 100px;
+    top: 10px;
+    left: 60px;
     animation-name: example;
-    animation-duration: 7s;
+    animation-duration: 15s;
     animation-iteration-count: 4;
     transition: linear;
 }
 
 .cloud3 {
     position: absolute;
-    width: 50px;
+    width: 100px;
     top: 0;
-    left: 100px;
+    left: 150px;
     animation-name: example;
-    animation-duration: 3s;
+    animation-duration: 15s;
     animation-iteration-count: 4;
     transition: linear;
 }
 
+.cloud4 {
+    position: absolute;
+    width: 100px;
+    top: 0;
+    left: 40px;
+    animation-name: example;
+    animation-duration: 15s;
+    animation-iteration-count: 4;
+    transition: linear;
+}
+
+.cloud5 {
+    position: absolute;
+    width: 100px;
+    top: 0;
+    left: 80px;
+    animation-name: example;
+    animation-duration: 15s;
+    animation-iteration-count: 4;
+    transition: linear;
+}
 

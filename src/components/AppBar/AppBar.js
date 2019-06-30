@@ -60,7 +60,6 @@ class AppBar extends React.Component {
 
   render() {
     const { selected: { location, weather, home, rental, contactus} } = this.state
-
     return (
       <div className="app-bar-main-panel">
         <Link key="locationBtn" to="/location">
