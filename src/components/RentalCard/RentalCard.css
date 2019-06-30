@@ -1,0 +1,77 @@
+.RentalCard {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5764ff+0,68b3fd+100 */
+background: #5764ff; /* Old browsers */
+background: -moz-linear-gradient(left, #5764ff 0%, #68b3fd 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #5764ff 0%,#68b3fd 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #5764ff 0%,#68b3fd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5764ff', endColorstr='#68b3fd',GradientType=1 ); /* IE6-9 */
+width: 80vw;
+height: 41vw;
+position: relative;
+border-radius: 30px;
+margin: 0 auto;
+margin-top: 6em;
+box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.15);
+}
+
+
+.heading1 {
+    position: absolute;
+    left: 6vw;
+    color: white;
+    top: 8vh;
+    font-size: 1.7em;
+    z-index: 21;
+}
+
+.heading2 {
+    color: white;
+    font-size: 1.7em;
+    left: 6vw;
+    top: 4vh;
+    position: absolute;
+    z-index: 21;
+}
+
+.level {
+    color: white;
+    background-color: #45EBCB;
+    display: inline-block;
+    border-radius: 0px 0px 10px 10px;
+    font-size: 1.7em;
+    margin: 0;
+    position: absolute;
+    left: 6vh;
+    padding: 0.1em;
+    z-index: 21;
+}
+
+.price {
+    position: absolute;
+    right: 4vh;
+    bottom: 0;
+    color: white;
+    font-size: 1.2em;
+}
+
+.CardImage {
+    width: 39vw;
+    height: 40vw;
+    position: absolute;
+    top: 0;
+    right: 11vw;
+    opacity: 0.1;
+}
+
+.button {
+    position: absolute;
+    right: 0vh;
+    font-size: 1.3em;
+    top: 10vh;
+    color: white;
+    background-color: #0B1C9F;
+    border: none;
+    padding: 0.5em;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+}

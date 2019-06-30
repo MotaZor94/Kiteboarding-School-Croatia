@@ -77,7 +77,7 @@ class AppBar extends React.Component {
           </div>
         </Link>
 
-        <Link key="homeBtn" to="/home" onClick={() => this.handleSelection('home')}>
+        <Link key="homeBtn" to="/" onClick={() => this.handleSelection('home')}>
           <div className="app-bar-icon-wrap home-icon">
             <img alt="aenona"src={Logo} className="app-bar-icon home-png"></img>
           </div>

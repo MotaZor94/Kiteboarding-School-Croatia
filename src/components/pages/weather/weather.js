@@ -37,8 +37,8 @@ class Weather extends React.Component {
 
   render() {
     return (
-      <div className="weather-wrap">
-        {/* <WeatherDataPanel temperature={24} pressure={54} humidity={80} windSpeed={9} weatherState='SUNNY'/> */}
+      <div className="weatherSection">
+        <h1>Weather Section</h1>
       </div>
     );
   }
