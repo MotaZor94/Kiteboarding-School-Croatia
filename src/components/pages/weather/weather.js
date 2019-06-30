@@ -1,44 +1,88 @@
 import React from 'react';
+import weatherLogic from '../weather/weatherForecastLogic'
 
-import fetchRequest from '../../fetch/fetchRequest';
-
-import WeatherDataPanel from '../weather/WeatherDataPanel'
-
-class Weather extends React.Component {
+class Weather extends React.PureComponent {
   constructor(props) {
     super(props);
 
     this.state = {
       data: 'data being loaded',
       loaded: false,
+      hourlyCards: false,
+      dailyCards: false
     };
+
+    this.prepareWheaterHourly = this.prepareWheaterHourly.bind(this)
+    this.prepareWeatherDaily = this.prepareWeatherDaily.bind(this)
   }
 
   async componentDidMount() {
     try {
-      const data = await fetchRequest('/darksky');
-      this.setState({ data, loaded: true });
+      this.setState({
+        data: await weatherLogic.updateWeather(),
+        loaded: true
+      })
     } catch (error) {
       console.log(error);
     }
+    this.prepareWheaterHourly()
+    this.prepareWeatherDaily()
   }
 
-  prepareWeatherCard() {
-    // const { data } = this.state;
-    // const result = data.current.temperature;
+  prepareWheaterHourly () {
+    const { data } = this.state.data.hourly
+    const hourlyCards = data.map((x, i) => {
+      if (i > 24) { return null }
+      const date = new Date(x.time * 1000)
+      const hour = date.getHours()
+
+      return (
+        <div className="weather-hourly-card">
+          <div className="weather-hourly-time">{hour}</div>
+          <div className="weather-hourly-temperature">{x.temperature}C</div>
+          <div className="weather-hourly-windIcon">windSpeed</div>
+          <div className="weather-hrouly-windSpeed">{x.windSpeed} KNOTS</div>
+        </div>
+    )})
+
+    this.setState({
+      ...this.state,
+      hourlyCards
+    })
   }
 
+  prepareWeatherDaily () {
+    const { data } = this.state.data.daily
+    const dailyCards = data.map(day => {
+      const date = new Date(day.time * 1000)
+      const dayDate = date.getDate()
 
-  // componentDidUpdate(prevProps, prevState) {
-  //     if (prevState.data !== this.state.data) {
+      return (
+        <div className="weather-daily-card">
+          <div className="weather-daily-date">{dayDate}</div>
+          <div className="weather-daily-temperature-max">{day.apparentTemperatureMax}</div>
+          <div className="weather-daily-temperature-min">{day.apparentTemperatureMin}</div>
+          <div className="weather-daily-wind-speed">{day.windSpeed}</div>
+        </div>
+      )
+    })
 
-  //     }
-  // }
+    this.setState({
+      ...this.state,
+      dailyCards
+    })
+  }
 
   render() {
+    const { hourlyCards, dailyCards } = this.state
     return (
-      <div className="weather-wrap">
-        {/* <WeatherDataPanel temperature={24} pressure={54} humidity={80} windSpeed={9} weatherState='SUNNY'/> */}
+      <div className="weather-card-wrap">
+        <div className="wheather-hourly-panel">
+        {Boolean(hourlyCards) && hourlyCards}
+        </div>
+        <div className="wheater-daily-panel">
+        {Boolean(dailyCards) && dailyCards}
+        </div>
       </div>
     );
   }

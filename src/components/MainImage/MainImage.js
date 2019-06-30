@@ -28,7 +28,7 @@ class MainImage extends Component {
 
     async componentDidMount() {
         const result = await weather.updateWeather()
-        console.log(Math.floor(result.currently.cloudCover * 10) / 2)
+        // console.log(Math.floor(result.currently.cloudCover * 10) / 2)
         const time = new Date().getHours()
         this.setState({
             ...this.state,
@@ -50,10 +50,10 @@ class MainImage extends Component {
     moonOrSun() {
         const { time, cloudiness } = this.state
         if (time > 8 && time < 20 && cloudiness < 4) {
-            console.log('sun')
+            // console.log('sun')
             return <img className="moonOrSun" alt="sunny" src={Sun}></img>
         } else if (time < 8 || time > 20 && cloudiness < 4) {
-            console.log('moon')
+            // console.log('moon')
             return <img className="moonOrSun" alt="sunny" src={Moon}></img>
         } else {
             return null
@@ -97,8 +97,8 @@ class MainImage extends Component {
     }
 
     render() {
-        console.log('main image render: ', this.state)
-        console.log('tyyyyyp: ', typeof this.state.cloudiness)
+        // console.log('main image render: ', this.state)
+        // console.log('tyyyyyp: ', typeof this.state.cloudiness)
         return (
             <div className="weather-graphic" style={{ filter: this.darkness() }}>
                 {this.moonOrSun()}

@@ -1,0 +1,66 @@
+.wheather-hourly-panel {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    overflow: hidden;
+    
+}
+
+.weather-hourly-card {
+    width: 25%;
+    margin-left: 10px;
+    border: 1px black solid;
+}
+
+.weather-hourly-time {
+
+}
+
+.weather-hourly-temperature {
+
+}
+
+.weather-hourly-windIcon {
+
+}
+
+.weather-hrouly-windSpeed {
+
+}
+
+/* ---------------- */
+/* ---------------- */
+
+.wheater-daily-panel {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 50vh;
+}
+
+.weather-daily-card {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+}
+
+.weather-daily-date {
+
+}
+
+.weather-daily-temperature-max {
+
+}
+
+.weather-daily-temperature-min {
+
+}
+
+.weather-daily-wind-speed {
+
+}
+
