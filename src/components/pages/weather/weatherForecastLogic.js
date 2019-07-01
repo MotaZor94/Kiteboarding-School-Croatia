@@ -11,7 +11,7 @@ class WeatherForecastLogic{
     async updateWeather() {
         try {
             const data = await fetchRequest('/darksky');
-            // console.log('DATA CAME: ', data)
+            console.log('DATA CAME: ', data)
             return data
         } catch (error) {
             console.log(error);

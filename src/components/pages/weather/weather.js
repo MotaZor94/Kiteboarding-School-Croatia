@@ -39,9 +39,9 @@ class Weather extends React.PureComponent {
       return (
         <div className="weather-hourly-card">
           <div className="weather-hourly-time">{hour}</div>
-          <div className="weather-hourly-temperature">{x.temperature}C</div>
+          <div className="weather-hourly-temperature">{(x.temperature - 32) * (5/9)}C</div>
           <div className="weather-hourly-windIcon">windSpeed</div>
-          <div className="weather-hrouly-windSpeed">{x.windSpeed} KNOTS</div>
+          <div className="weather-hrouly-windSpeed">{x.windSpeed * .87} KNOTS</div>
         </div>
     )})
 
@@ -60,9 +60,9 @@ class Weather extends React.PureComponent {
       return (
         <div className="weather-daily-card">
           <div className="weather-daily-date">{dayDate}</div>
-          <div className="weather-daily-temperature-max">{day.apparentTemperatureMax}</div>
-          <div className="weather-daily-temperature-min">{day.apparentTemperatureMin}</div>
-          <div className="weather-daily-wind-speed">{day.windSpeed}</div>
+          <div className="weather-daily-temperature-max">{(day.apparentTemperatureMax - 32)*(5/9)}</div>
+          <div className="weather-daily-temperature-min">{(day.apparentTemperatureMin - 32)*(5/9)}</div>
+          <div className="weather-daily-wind-speed">{day.windSpeed * .87}</div>
         </div>
       )
     })
@@ -76,10 +76,6 @@ class Weather extends React.PureComponent {
   render() {
     const { hourlyCards, dailyCards } = this.state
     return (
-<<<<<<< HEAD
-      <div className="weatherSection">
-        <h1>Weather Section</h1>
-=======
       <div className="weather-card-wrap">
         <div className="wheather-hourly-panel">
         {Boolean(hourlyCards) && hourlyCards}
@@ -87,7 +83,6 @@ class Weather extends React.PureComponent {
         <div className="wheater-daily-panel">
         {Boolean(dailyCards) && dailyCards}
         </div>
->>>>>>> 85fade30284c044e23c33b0e705d30102eb5651a
       </div>
     );
   }
