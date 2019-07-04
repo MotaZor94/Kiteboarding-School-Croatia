@@ -39,6 +39,7 @@ class MainImage extends Component {
     }
 
     prepareClouds() {
+        console.log('prepare clouds')
         const { cloudiness } = this.state
         var clouds = []
         for (let i = 1; i <= cloudiness; i++) {
@@ -49,21 +50,24 @@ class MainImage extends Component {
 
     moonOrSun() {
         const { time, cloudiness } = this.state
-        if (time > 8 && time < 20 && cloudiness < 4) {
-            // console.log('sun')
+        console.log('moon or sun')
+        if (time >= 8 && time < 20) {
+            console.log('sun')
             return <img className="moonOrSun" alt="sunny" src={Sun}></img>
-        } else if (time < 8 || time > 20 && cloudiness < 4) {
-            // console.log('moon')
+        } else if (time < 8 || time >= 20 && cloudiness < 4) {
+            console.log('moon')
             return <img className="moonOrSun" alt="sunny" src={Moon}></img>
         } else {
+            console.log('nada')
             return null
         }
     }
 
     darkness() {
+        console.log('DARKNESS')
         const { time, cloudiness } = this.state
         var value = 100
-        if (time > 8 && time < 20) {
+        if (time >= 8 && time < 20) {
             switch (true) {
                 case (cloudiness > 4):
                     console.log('cloudiness gihhern than 4')
@@ -86,10 +90,11 @@ class MainImage extends Component {
                     break;
 
                 default:
+                    console.log('no darkness')
                     value = 100
                     break;
             }
-        } else if (time > 20 || time < 8) {
+        } else if (time >= 20 || time < 8) {
             value = 80
         }
 
