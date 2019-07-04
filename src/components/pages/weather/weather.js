@@ -76,10 +76,6 @@ class Weather extends React.PureComponent {
   render() {
     const { hourlyCards, dailyCards } = this.state
     return (
-<<<<<<< HEAD
-      <div className="weatherSection">
-        <h1>Weather Section</h1>
-=======
       <div className="weather-card-wrap">
         <div className="wheather-hourly-panel">
         {Boolean(hourlyCards) && hourlyCards}
@@ -87,7 +83,6 @@ class Weather extends React.PureComponent {
         <div className="wheater-daily-panel">
         {Boolean(dailyCards) && dailyCards}
         </div>
->>>>>>> 85fade30284c044e23c33b0e705d30102eb5651a
       </div>
     );
   }
