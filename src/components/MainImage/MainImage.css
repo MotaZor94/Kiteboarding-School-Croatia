@@ -4,7 +4,7 @@
     position: relative;
     margin-top: 18em;
     width: 80vw;
-    /* filter: brightness(50%); */
+    z-index: 0;
 }
 
 

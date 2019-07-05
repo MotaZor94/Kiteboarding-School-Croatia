@@ -9,6 +9,13 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.main-wrap-horizontal {
+    margin-top: -25em;
+    padding-top: 25em;
+    position: absolute;
+    z-index: 2;
+}
+
 .mainSection {
     width: 100vw;
 }
