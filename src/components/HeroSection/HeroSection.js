@@ -13,9 +13,11 @@ class HeroSection extends Component {
     }
     async componentDidMount() {
         let data = await weatherLogic.updateWeather()
-        let info = weatherLogic.getWeatherStatus(data.currently)
+        // console.log('data came:', data)
+        let info = weatherLogic.getWeatherStatus(data.currently, data.daily)
         this.setState({ info })
     }
+
     render() {
         const { location: { pathname } } = this.props
         const { info } = this.state

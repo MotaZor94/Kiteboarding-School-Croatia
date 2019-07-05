@@ -39,7 +39,6 @@ class MainImage extends Component {
     }
 
     prepareClouds() {
-        console.log('prepare clouds')
         const { cloudiness } = this.state
         var clouds = []
         for (let i = 1; i <= cloudiness; i++) {
