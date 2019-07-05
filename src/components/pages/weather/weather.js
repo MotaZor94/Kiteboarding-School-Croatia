@@ -1,22 +1,25 @@
 import React from 'react';
 import weatherLogic from '../weather/weatherForecastLogic'
 
+import HourlyWeatherCard from '../../ui/hourlyWeatherCard/HourlyWeatherCard'
+
 class Weather extends React.PureComponent {
   constructor(props) {
     super(props);
 
     this.state = {
-      data: 'data being loaded',
+      data: null,
       loaded: false,
       hourlyCards: false,
       dailyCards: false
     };
 
-    this.prepareWheaterHourly = this.prepareWheaterHourly.bind(this)
+    // this.prepareWheaterHourly = this.prepareWheaterHourly.bind(this)
     this.prepareWeatherDaily = this.prepareWeatherDaily.bind(this)
   }
 
   async componentDidMount() {
+    console.log('weather did mount: ')
     try {
       this.setState({
         data: await weatherLogic.updateWeather(),
@@ -25,31 +28,9 @@ class Weather extends React.PureComponent {
     } catch (error) {
       console.log(error);
     }
-    this.prepareWheaterHourly()
     this.prepareWeatherDaily()
   }
-
-  prepareWheaterHourly () {
-    const { data } = this.state.data.hourly
-    const hourlyCards = data.map((x, i) => {
-      if (i > 24) { return null }
-      const date = new Date(x.time * 1000)
-      const hour = date.getHours()
-
-      return (
-        <div className="weather-hourly-card">
-          <div className="weather-hourly-time">{hour}</div>
-          <div className="weather-hourly-temperature">{((x.temperature - 32) * (5/9)).toFixed(1)}C</div>
-          <div className="weather-hourly-windIcon">windSpeed</div>
-          <div className="weather-hrouly-windSpeed">{(x.windSpeed * .87).toFixed(1)} KNOTS</div>
-        </div>
-    )})
-
-    this.setState({
-      ...this.state,
-      hourlyCards
-    })
-  }
+  
 
   prepareWeatherDaily () {
     const { data } = this.state.data.daily
@@ -74,14 +55,24 @@ class Weather extends React.PureComponent {
   }
 
   render() {
-    const { hourlyCards, dailyCards } = this.state
+    const { data } = this.state
+    let hourly = null
+    if (data) {
+      console.log('data yes')
+      hourly = data.hourly.data
+      // console.log(hourly)
+    }
+    console.log('sending', hourly)
+
+    // const { data } = this.state.data.daily
     return (
       <>
         <div className="wheather-hourly-panel">
-        {Boolean(hourlyCards) && hourlyCards}
+          <HourlyWeatherCard hourlyData={hourly} />
+        {/* {Boolean(data) && <HourlyWeatherCard hourlyData={hourly} />} */}
         </div>
         <div className="wheater-daily-panel">
-        {Boolean(dailyCards) && dailyCards}
+        {/* {Boolean(dailyCards) && dailyCards} */}
         </div>
       </>
     );
