@@ -10,22 +10,27 @@ import Rental from './components/pages/rental/rental'
 import AppBar from './components/AppBar/AppBar'
 import MainImage from './components/MainImage/MainImage'
 import HeroSection from './components/HeroSection/HeroSection'
+import weatherLogic from './components/pages/weather/weatherForecastLogic'
 import './index.css'
 
 import MainIllustration from './components/MainIllustration/MainIllustration'
 
 const App = () => {
-  return (
+  
 
+  return (
     <Router>
       <Route key="appBarComp" path="/" component={AppBar} />
-      <HeroSection />
-       
+      <Route 
+        key="mainImageMain"
+        path="/"
+        render={({location}) => <HeroSection location={location}/>}
+      />
+
       <SwipeableRoutes className="main-wrap-horizontal">
         
          <Route key="weatherComp" exact path="/weather" component={Weather} />
          <Route key="mainComp" exact path="/" component={Main} />
-         {/* <Route key="mainMainImage" path="/home" component={MainImage} /> */}
          <Route path="/rental" component={Rental} />
         
       </SwipeableRoutes>

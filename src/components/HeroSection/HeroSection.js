@@ -1,21 +1,36 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import MainImage from '../MainImage/MainImage'
+import weatherLogic from '../pages/weather/weatherForecastLogic'
 
 class HeroSection extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            info: null
+        }
+    }
+    async componentDidMount() {
+        let data = await weatherLogic.updateWeather()
+        // console.log('data came:', data)
+        let info = weatherLogic.getWeatherStatus(data.currently, data.daily)
+        this.setState({ info })
+    }
+
     render() {
-        // console.log('hero secrtion render')
+        const { location: { pathname } } = this.props
+        const { info } = this.state
         return (
-            <div  className="hero-section">
-                <h1>Kiteboarding <br/>Conditions</h1>
-                <MainImage />
-                {/* <div className="heading">
-                <h1 className="kiteboarding">Kiteboarding</h1>
-                <h1>equipment</h1>
-                <h1>rentals</h1>
-                <p>Push your kiteboarding skills with 
-                our astonishing equipment</p>
-                </div> */}
-            </div>
+            <>
+            {info && 
+                <div className={`hero-section ${info}`} >
+                {(pathname === '/weather' || pathname === '/') 
+                ? <MainImage /> 
+                : null
+                }
+            </div>}
+            </>
         )
     }
 }
