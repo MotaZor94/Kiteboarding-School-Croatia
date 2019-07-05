@@ -3,6 +3,7 @@
 @import "./components/MainImage/MainImage.css";
 @import "./components//RentalCard/RentalCard.css";
 @import "./components/pages/weather/weather.css";
+@IMPORT "./components/ui/hourlyWeatherCard/HourlyWeatherCard.css";
 
 body {
     margin: 0;

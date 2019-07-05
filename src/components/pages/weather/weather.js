@@ -68,6 +68,11 @@ class Weather extends React.PureComponent {
     return (
       <>
         <div className="wheather-hourly-panel">
+          {/* <div className="wheather-hourly-card-desc">
+            <div className="wheather-card-hourly-desc-status">status</div>
+            <div className="wheather-card-hourly-desc">temp</div>
+            <div className="wheather-card-hourly-desc">wind speed</div>
+          </div> */}
           <HourlyWeatherCard hourlyData={hourly} />
         {/* {Boolean(data) && <HourlyWeatherCard hourlyData={hourly} />} */}
         </div>
