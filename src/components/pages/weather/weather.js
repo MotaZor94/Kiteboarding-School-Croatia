@@ -39,9 +39,9 @@ class Weather extends React.PureComponent {
       return (
         <div className="weather-hourly-card">
           <div className="weather-hourly-time">{hour}</div>
-          <div className="weather-hourly-temperature">{(x.temperature - 32) * (5/9)}C</div>
+          <div className="weather-hourly-temperature">{((x.temperature - 32) * (5/9)).toFixed(1)}C</div>
           <div className="weather-hourly-windIcon">windSpeed</div>
-          <div className="weather-hrouly-windSpeed">{x.windSpeed * .87} KNOTS</div>
+          <div className="weather-hrouly-windSpeed">{(x.windSpeed * .87).toFixed(1)} KNOTS</div>
         </div>
     )})
 
@@ -60,9 +60,9 @@ class Weather extends React.PureComponent {
       return (
         <div className="weather-daily-card">
           <div className="weather-daily-date">{dayDate}</div>
-          <div className="weather-daily-temperature-max">{(day.apparentTemperatureMax - 32)*(5/9)}</div>
-          <div className="weather-daily-temperature-min">{(day.apparentTemperatureMin - 32)*(5/9)}</div>
-          <div className="weather-daily-wind-speed">{day.windSpeed * .87}</div>
+          <div className="weather-daily-temperature-max">{((day.apparentTemperatureMax - 32)*(5/9)).toFixed(1)}</div>
+          <div className="weather-daily-temperature-min">{((day.apparentTemperatureMin - 32)*(5/9)).toFixed(1)}</div>
+          <div className="weather-daily-wind-speed">{(day.windSpeed * .87).toFixed(1)}</div>
         </div>
       )
     })
