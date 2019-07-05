@@ -43,10 +43,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 99%;
-    margin: 0 auto;
+    width: 80vw;
     height: 20vh;
-    overflow: hidden;
+    margin: 0 auto;
 }
 
 .weather-daily-date {

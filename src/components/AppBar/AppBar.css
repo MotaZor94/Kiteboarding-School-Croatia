@@ -14,6 +14,7 @@
     box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.25);
     border-radius: 0px 0px 80px 80px;
     z-index: 20;
+    height: 3em;
 }
 .app-bar-icon-wrap {
     display: flex;
@@ -37,7 +38,7 @@
     box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.25);
 }
 .app-bar-icon {
-    width: 8vw;
+    width: 3em;
 }
 .home-png {
     height: 10vw;
@@ -52,4 +53,6 @@ a {
 
 .app-bar-desc {
     margin: 0;
+    position: absolute;
+    bottom: 0.2em;
 }

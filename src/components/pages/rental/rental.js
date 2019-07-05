@@ -16,6 +16,13 @@ export default function rental() {
           price="110 Euro"
           booknow="BOOK NOW"
            />
+           <RentalCard 
+          heading1="Land Rental"
+          heading2="Trainer Kite"
+          level="Advanced"
+          price="110 Euro"
+          booknow="BOOK NOW"
+           />
     </div>
   );
 }
