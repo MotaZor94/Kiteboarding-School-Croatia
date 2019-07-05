@@ -25,7 +25,6 @@ const App = () => {
         
          <Route key="weatherComp" exact path="/weather" component={Weather} />
          <Route key="mainComp" exact path="/" component={Main} />
-         <Route key="mainComp" exact path="/home" component={Main} />
          {/* <Route key="mainMainImage" path="/home" component={MainImage} /> */}
          <Route path="/rental" component={Rental} />
         

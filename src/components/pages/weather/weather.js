@@ -76,14 +76,14 @@ class Weather extends React.PureComponent {
   render() {
     const { hourlyCards, dailyCards } = this.state
     return (
-      <div className="weather-card-wrap">
+      <>
         <div className="wheather-hourly-panel">
         {Boolean(hourlyCards) && hourlyCards}
         </div>
         <div className="wheater-daily-panel">
         {Boolean(dailyCards) && dailyCards}
         </div>
-      </div>
+      </>
     );
   }
 }

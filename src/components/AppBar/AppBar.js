@@ -65,7 +65,7 @@ class AppBar extends React.Component {
         <Link key="locationBtn" to="/location">
           <div className="app-bar-icon-wrap location-icon" onClick={() => this.handleSelection('location')}>
             {location ? <LocationColorIcon className="app-bar-icon"/> : <LocationIcon fill="#A4A4A4" className="app-bar-icon"/>}
-            <p style={location ? { color:"#1F95B9" } : { color:"#A4A4A4" }} className ="app-bar-d e s c  location">LOCATION</p>
+            <p style={location ? { color:"#1F95B9" } : { color:"#A4A4A4" }} className ="app-bar-desc  location">LOCATION</p>
           </div>
         </Link>
 

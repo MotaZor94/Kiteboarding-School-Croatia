@@ -6,6 +6,7 @@ class HeroSection extends Component {
         // console.log('hero secrtion render')
         return (
             <div  className="hero-section">
+                <h1>Kiteboarding <br/>Conditions</h1>
                 <MainImage />
                 {/* <div className="heading">
                 <h1 className="kiteboarding">Kiteboarding</h1>
