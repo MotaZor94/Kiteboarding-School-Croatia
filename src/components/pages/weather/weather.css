@@ -2,32 +2,33 @@
     display: flex;
     flex-direction: row;
     width: 100vw;
-    overflow: hidden;
-    
+    overflow-x: scroll;   
 }
 
-.weather-hourly-card {
-    width: 25%;
-    margin-left: 10px;
-    border: 1px black solid;
-}
-
-.weather-hourly-time {
-
-}
-
-.weather-hourly-temperature {
+.wheather-hourly-card-desc {
+    min-width: 70px;
+    margin-left: -4%;
+    background-color: black;
+    border-radius: 30px;
+    padding: 2%;
+    padding-right: 4%;
 
 }
 
-.weather-hourly-windIcon {
-
+.wheather-card-hourly-desc {
+    color: white;
+    font-size: .6em;
+    text-align: right;
+    margin-top: 20%;
+    margin-bottom: 20%;
 }
 
-.weather-hrouly-windSpeed {
-
+.wheather-card-hourly-desc-status {
+    color: white;
+    font-size: .6em;
+    text-align: right;
+    margin-top: 55%;
 }
-
 /* ---------------- */
 /* ---------------- */
 
@@ -35,7 +36,6 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 50vh;
 }
 
 .weather-daily-card {

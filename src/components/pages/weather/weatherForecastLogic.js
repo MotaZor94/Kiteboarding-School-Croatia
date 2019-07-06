@@ -6,7 +6,6 @@ class WeatherForecastLogic{
     }
 
     getWeatherStatus(currently, daily) {
-        console.log(daily)
         const cld = Math.floor((currently.cloudCover * 10) / 2)
         const status = currently.icon
 
@@ -52,7 +51,7 @@ class WeatherForecastLogic{
 
     updateWeather() {
         try {
-            const data = fetchRequest('/darksky');
+            const data = fetchRequest('http://10.0.0.43:5000/darksky');
             return data
         } catch (error) {
             console.log(error);

@@ -4,6 +4,8 @@
 @import "./components//RentalCard/RentalCard.css";
 @import "./components/pages/weather/weather.css";
 @import "./components/ImageComp/ImageComp.css";
+@import "./components/ui/hourlyWeatherCard/HourlyWeatherCard.css";
+@import "./components/ui/dailyWeatherCard/DailyWeatherCard.css";
 
 body {
     margin: 0;
@@ -24,10 +26,6 @@ body {
 } */
 
 
-.test {
-    overflow-y: scroll;
-    height: 100vh;
-}
 .main-wrap-horizontal {
     margin-top: -25em;
     padding-top: 25em;
@@ -105,4 +103,22 @@ body {
     width: 100vw !important;
     scroll-snap-align: center;
     flex-shrink: 0;
+}
+
+
+
+.weather-panel {
+    display: none;
+}
+
+.rentalSection {
+    display: none;
+}
+
+.mainSection {
+    display: none;
+}
+
+.opened {
+    display: unset;
 }

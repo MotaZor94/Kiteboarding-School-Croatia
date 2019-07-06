@@ -1,18 +1,23 @@
 import React from 'react';
 import weatherLogic from '../weather/weatherForecastLogic'
 
+import HourlyWeatherCard from '../../ui/hourlyWeatherCard/HourlyWeatherCard'
+import DailyWeatherCard from '../../ui/dailyWeatherCard/DailyWeatherCard'
+
+import PartlyCloudyDayIcon from '../../../images/weatherIcons/partly-cloudy-day.png'
+
 class Weather extends React.PureComponent {
   constructor(props) {
     super(props);
 
     this.state = {
-      data: 'data being loaded',
+      data: null,
       loaded: false,
       hourlyCards: false,
       dailyCards: false
     };
 
-    this.prepareWheaterHourly = this.prepareWheaterHourly.bind(this)
+    // this.prepareWheaterHourly = this.prepareWheaterHourly.bind(this)
     this.prepareWeatherDaily = this.prepareWeatherDaily.bind(this)
   }
 
@@ -25,31 +30,9 @@ class Weather extends React.PureComponent {
     } catch (error) {
       console.log(error);
     }
-    this.prepareWheaterHourly()
     this.prepareWeatherDaily()
   }
-
-  prepareWheaterHourly () {
-    const { data } = this.state.data.hourly
-    const hourlyCards = data.map((x, i) => {
-      if (i > 24) { return null }
-      const date = new Date(x.time * 1000)
-      const hour = date.getHours()
-
-      return (
-        <div className="weather-hourly-card">
-          <div className="weather-hourly-time">{hour}</div>
-          <div className="weather-hourly-temperature">{((x.temperature - 32) * (5/9)).toFixed(1)}C</div>
-          <div className="weather-hourly-windIcon">windSpeed</div>
-          <div className="weather-hrouly-windSpeed">{(x.windSpeed * .87).toFixed(1)} KNOTS</div>
-        </div>
-    )})
-
-    this.setState({
-      ...this.state,
-      hourlyCards
-    })
-  }
+  
 
   prepareWeatherDaily () {
     const { data } = this.state.data.daily
@@ -74,16 +57,45 @@ class Weather extends React.PureComponent {
   }
 
   render() {
-    const { hourlyCards, dailyCards } = this.state
+    const { location: { pathname } } = this.props
+
+    let opened = null
+    if (pathname === '/weather') {
+      opened = 'opened'
+    }
+
+    const { data } = this.state
+    let hourly = null
+    let daily = null
+    if (data) {
+      // console.log('data yes', data)
+      hourly = data.hourly.data
+      daily = data.daily.data
+      // console.log(hourly)
+    }
+
+    // console.log('sending', daily)
+
+    // const { data } = this.state.data.daily
     return (
-      <>
+      <div className={`weather-panel ${opened}`}>
         <div className="wheather-hourly-panel">
-        {Boolean(hourlyCards) && hourlyCards}
+          <HourlyWeatherCard hourlyData={hourly} />
+          <div className="weather-hourly-card">
+              <div className="weather-hourly-time">10</div>
+              <img className="wheather-hourly-icon" alt="weather-icon" src={PartlyCloudyDayIcon} />
+              <div className="weather-hourly-temperature">17C</div>
+              {/* <div className="weather-hourly-windSpeedDesc">wind speed</div> */}
+              <div className="weather-hrouly-windSpeed">10<span className='weather-hourly-knots'>knots</span></div>
+            </div>
         </div>
         <div className="wheater-daily-panel">
-        {Boolean(dailyCards) && dailyCards}
+          <DailyWeatherCard dailyData={daily} />
+          <DailyWeatherCard dailyData={daily} />
+          <DailyWeatherCard dailyData={daily} />
+          <DailyWeatherCard dailyData={daily} />
         </div>
-      </>
+      </div>
     );
   }
 }
