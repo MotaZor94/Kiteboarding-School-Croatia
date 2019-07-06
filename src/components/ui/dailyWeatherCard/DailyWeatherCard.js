@@ -70,18 +70,18 @@ export default function DailyWeatherCard({ dailyData }) {
         dailyCards = dailyData.map((x, i) => {
             return (
                 <div key={x.time} className="daily-weather-card">
-                    <div className="daily-weather-date">1 August</div>
-                    <div>
+                    <div className="daily-weather-date daily-desc">1 August</div>
+                    <div className="daily-weather-right">
                         <img className="wheather-hourly-icon" alt="weather-icon" src={setIcon(x.icon)} />
                         <div 
-                            className="daily-weather-temp-max">
+                            className="daily-weather-temp-max daily-desc">
                                 25.4
-                                <span className="daily-weather-unit">C</span>
+                                <span className="daily-weather-unit daily-desc">C /</span>
                         </div>
                         <div 
-                            className="daily-weather-temp-low">
+                            className="daily-weather-temp-low daily-desc">
                                 17.0
-                                <span className="daily-weather-unit">C</span>
+                                <span className="daily-weather-unit daily-desc">C</span>
                         </div>
                     </div>
                 </div>

@@ -8,9 +8,9 @@ import Main from './components/pages/main/main'
 import Weather from './components/pages/weather/weather'
 import Rental from './components/pages/rental/rental'
 import AppBar from './components/AppBar/AppBar'
-import MainImage from './components/MainImage/MainImage'
+// import MainImage from './components/MainImage/MainImage'
 import HeroSection from './components/HeroSection/HeroSection'
-import weatherLogic from './components/pages/weather/weatherForecastLogic'
+// import weatherLogic from './components/pages/weather/weatherForecastLogic'
 import './index.css'
 
 import MainIllustration from './components/MainIllustration/MainIllustration'
@@ -32,9 +32,9 @@ const App = () => {
 
           <Route key="weatherComp" exact path="/weather" render={({ location }) => <Weather location={location}/>} />
 
-          <Route key="mainComp" style={{ paddingBottom: '0' }} exact path="/" render={({ location }) => <Main location={location}/>} />
+          <Route key="mainComp" exact path="/" render={({ location }) => <Main location={location}/>} />
 
-          <Route path="/rental" render={({ location }) => <Rental location={location}/>} />
+          <Route key="rentalComp" path="/rental" render={({ location }) => <Rental location={location}/>} />
 
         </SwipeableRoutes>
       </div>

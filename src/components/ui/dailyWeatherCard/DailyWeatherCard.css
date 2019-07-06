@@ -1,17 +1,30 @@
 .daily-weather-card {
-    width: 95%;
-    height: 70px;
-    margin: 15px auto;
-    border-radius: 20px;
+    width: 95vw;
+    height: 15vw;
+    margin: 10px auto;
+    padding: 0 5%;
+    border-radius: 2vw;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    background-color: red;
+    justify-content: space-between;
+    background-color: grey;
+    box-sizing: border-box;
 }
 
 .daily-weather-date {
 
+}
+
+.daily-weather-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.daily-desc {
+    font-size: 4vw;
 }
 
 .wheather-hourly-icon {
