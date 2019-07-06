@@ -16,24 +16,28 @@ import './index.css'
 import MainIllustration from './components/MainIllustration/MainIllustration'
 
 const App = () => {
-  
+  // window.addEventListener('scroll', () => console.log('scrolll: ', document.pageXOffset));
 
   return (
     <Router>
       <Route key="appBarComp" path="/" component={AppBar} />
-      <Route 
-        key="mainImageMain"
-        path="/"
-        render={({location}) => <HeroSection location={location}/>}
-      />
+      <div className="test">
+        <Route 
+          key="mainImageMain"
+          path="/"
+          render={({location}) => <HeroSection location={location}/>}
+        />
 
-      <SwipeableRoutes className="main-wrap-horizontal">
-        
-         <Route key="weatherComp" exact path="/weather" component={Weather} />
-         <Route key="mainComp" exact path="/" component={Main} />
-         <Route path="/rental" component={Rental} />
-        
-      </SwipeableRoutes>
+        <SwipeableRoutes className="main-wrap-horizontal">
+
+          <Route key="weatherComp" exact path="/weather" render={({ location }) => <Weather location={location}/>} />
+
+          <Route key="mainComp" style={{ paddingBottom: '0' }} exact path="/" render={({ location }) => <Main location={location}/>} />
+
+          <Route path="/rental" render={({ location }) => <Rental location={location}/>} />
+
+        </SwipeableRoutes>
+      </div>
     </Router>
   )
 };

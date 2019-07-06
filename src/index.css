@@ -3,7 +3,8 @@
 @import "./components/MainImage/MainImage.css";
 @import "./components//RentalCard/RentalCard.css";
 @import "./components/pages/weather/weather.css";
-@IMPORT "./components/ui/hourlyWeatherCard/HourlyWeatherCard.css";
+@import "./components/ui/hourlyWeatherCard/HourlyWeatherCard.css";
+@import "./components/ui/dailyWeatherCard/DailyWeatherCard.css";
 
 body {
     margin: 0;
@@ -22,6 +23,7 @@ body {
     -webkit-scroll-snap-type: x mandatory !important;
     -webkit-overflow-scrolling: touch;
 } */
+
 
 .main-wrap-horizontal {
     margin-top: -25em;
@@ -100,4 +102,22 @@ body {
     width: 100vw !important;
     scroll-snap-align: center;
     flex-shrink: 0;
+}
+
+
+
+.weather-panel {
+    display: none;
+}
+
+.rentalSection {
+    display: none;
+}
+
+.mainSection {
+    display: none;
+}
+
+.opened {
+    display: unset;
 }

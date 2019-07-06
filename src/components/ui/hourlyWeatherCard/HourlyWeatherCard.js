@@ -37,7 +37,6 @@ function setIcon(status) {
 
 export default function HourlyWeatherCard({ hourlyData }) {
     let hourlyCards = null
-    console.log(hourlyData)
     if (hourlyData) {
         hourlyCards = hourlyData.map((x, i) => {
           if (i > 24) { return null }

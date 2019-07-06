@@ -2,6 +2,7 @@ import React from 'react';
 import weatherLogic from '../weather/weatherForecastLogic'
 
 import HourlyWeatherCard from '../../ui/hourlyWeatherCard/HourlyWeatherCard'
+import DailyWeatherCard from '../../ui/dailyWeatherCard/DailyWeatherCard'
 
 class Weather extends React.PureComponent {
   constructor(props) {
@@ -19,7 +20,6 @@ class Weather extends React.PureComponent {
   }
 
   async componentDidMount() {
-    console.log('weather did mount: ')
     try {
       this.setState({
         data: await weatherLogic.updateWeather(),
@@ -55,31 +55,45 @@ class Weather extends React.PureComponent {
   }
 
   render() {
+    const { location: { pathname } } = this.props
+
+    let opened = null
+    if (pathname === '/weather') {
+      opened = 'opened'
+    }
+
     const { data } = this.state
     let hourly = null
+    let daily = null
     if (data) {
-      console.log('data yes')
+      // console.log('data yes', data)
       hourly = data.hourly.data
+      daily = data.daily.data
       // console.log(hourly)
     }
-    console.log('sending', hourly)
+
+    // console.log('sending', daily)
 
     // const { data } = this.state.data.daily
     return (
-      <>
+      <div className={`weather-panel ${opened}`}>
         <div className="wheather-hourly-panel">
-          {/* <div className="wheather-hourly-card-desc">
-            <div className="wheather-card-hourly-desc-status">status</div>
-            <div className="wheather-card-hourly-desc">temp</div>
-            <div className="wheather-card-hourly-desc">wind speed</div>
-          </div> */}
           <HourlyWeatherCard hourlyData={hourly} />
-        {/* {Boolean(data) && <HourlyWeatherCard hourlyData={hourly} />} */}
         </div>
         <div className="wheater-daily-panel">
+          <DailyWeatherCard dailyData={daily} />
+          <DailyWeatherCard dailyData={daily} />
+          <DailyWeatherCard dailyData={daily} />
+          <DailyWeatherCard dailyData={daily} />
+          <DailyWeatherCard dailyData={daily} />
+          <DailyWeatherCard dailyData={daily} />
+          <DailyWeatherCard dailyData={daily} />
+          <DailyWeatherCard dailyData={daily} />
+          <DailyWeatherCard dailyData={daily} />
+          <DailyWeatherCard dailyData={daily} />
         {/* {Boolean(dailyCards) && dailyCards} */}
         </div>
-      </>
+      </div>
     );
   }
 }

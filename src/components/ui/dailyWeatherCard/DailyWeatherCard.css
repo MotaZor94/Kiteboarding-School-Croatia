@@ -1,0 +1,47 @@
+.daily-weather-card {
+    width: 95%;
+    height: 70px;
+    margin: 15px auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: red;
+}
+
+.daily-weather-date {
+
+}
+
+.wheather-hourly-icon {
+
+}
+
+.daily-weather-temp-max {
+
+}
+
+.daily-weather-temp-low {
+
+}
+
+.daily-weather-unit {
+
+}
+
+.red {
+    
+}
+
+.blue {
+
+}
+
+.green {
+
+}
+
+.yellow {
+
+}

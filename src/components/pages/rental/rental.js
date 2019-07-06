@@ -1,9 +1,14 @@
 import React from 'react';
 import RentalCard from '../../RentalCard/RentalCard'
 
-export default function rental() {
+export default function rental({ location }) {
+
+    let opened = null
+    if (location.pathname === '/rental') {
+      opened = 'opened'
+    }
   return (
-    <div className="rentalSection">
+    <div className={`rentalSection ${opened}`}>
         <div className="RentalTitle">
         <h1>EXCEPTIONAL GEAR</h1>
         <h2>STUNNING CONDITIONS</h2>
