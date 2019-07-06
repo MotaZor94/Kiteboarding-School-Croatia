@@ -8,27 +8,29 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: grey;
+    background-color: #F17373;
     box-sizing: border-box;
 }
 
 .daily-weather-date {
-
+    font-weight: 600;
 }
 
 .daily-weather-right {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 50%;
+    align-items: center;
+    width: 35%;
 }
 
 .daily-desc {
     font-size: 4vw;
+    font-weight: 600;
 }
 
 .wheather-hourly-icon {
-
+    height: 4vw;
 }
 
 .daily-weather-temp-max {
@@ -36,7 +38,8 @@
 }
 
 .daily-weather-temp-low {
-
+    color: #4E4E4E;
+    opacity: 0.7;
 }
 
 .daily-weather-unit {

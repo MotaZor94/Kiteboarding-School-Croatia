@@ -4,6 +4,8 @@ import weatherLogic from '../weather/weatherForecastLogic'
 import HourlyWeatherCard from '../../ui/hourlyWeatherCard/HourlyWeatherCard'
 import DailyWeatherCard from '../../ui/dailyWeatherCard/DailyWeatherCard'
 
+import PartlyCloudyDayIcon from '../../../images/weatherIcons/partly-cloudy-day.png'
+
 class Weather extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -79,19 +81,19 @@ class Weather extends React.PureComponent {
       <div className={`weather-panel ${opened}`}>
         <div className="wheather-hourly-panel">
           <HourlyWeatherCard hourlyData={hourly} />
+          <div className="weather-hourly-card">
+              <div className="weather-hourly-time">10</div>
+              <img className="wheather-hourly-icon" alt="weather-icon" src={PartlyCloudyDayIcon} />
+              <div className="weather-hourly-temperature">17C</div>
+              {/* <div className="weather-hourly-windSpeedDesc">wind speed</div> */}
+              <div className="weather-hrouly-windSpeed">10<span className='weather-hourly-knots'>knots</span></div>
+            </div>
         </div>
         <div className="wheater-daily-panel">
           <DailyWeatherCard dailyData={daily} />
           <DailyWeatherCard dailyData={daily} />
           <DailyWeatherCard dailyData={daily} />
           <DailyWeatherCard dailyData={daily} />
-          <DailyWeatherCard dailyData={daily} />
-          <DailyWeatherCard dailyData={daily} />
-          <DailyWeatherCard dailyData={daily} />
-          <DailyWeatherCard dailyData={daily} />
-          <DailyWeatherCard dailyData={daily} />
-          <DailyWeatherCard dailyData={daily} />
-        {/* {Boolean(dailyCards) && dailyCards} */}
         </div>
       </div>
     );

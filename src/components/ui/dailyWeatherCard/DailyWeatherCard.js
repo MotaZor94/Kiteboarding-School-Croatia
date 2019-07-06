@@ -66,13 +66,14 @@ function setColor(index) {
 
 export default function DailyWeatherCard({ dailyData }) {
     let dailyCards = null
-    if (dailyData) {
-        dailyCards = dailyData.map((x, i) => {
+    // if (dailyData) {
+        // dailyCards = dailyData.map((x, i) => {
+            // console.log('daily: ', x)
             return (
-                <div key={x.time} className="daily-weather-card">
+                <div className="daily-weather-card">
                     <div className="daily-weather-date daily-desc">1 August</div>
                     <div className="daily-weather-right">
-                        <img className="wheather-hourly-icon" alt="weather-icon" src={setIcon(x.icon)} />
+                        <img className="wheather-hourly-icon" alt="weather-icon" src={ClearNightIcon} />
                         <div 
                             className="daily-weather-temp-max daily-desc">
                                 25.4
@@ -86,7 +87,7 @@ export default function DailyWeatherCard({ dailyData }) {
                     </div>
                 </div>
             )
-        })
-    }
+        // })
+    // }
     return dailyCards
 }
