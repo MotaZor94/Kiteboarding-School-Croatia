@@ -62,14 +62,6 @@
     text-align: center;
 }
 
-.hero-section h1 {
-    font-size: 2em;
-    margin: 0;
-    font-weight: 400;
-    margin-top: -0.3em;
-    color: #414141;
-}
-
 .hero-section .kiteboarding {
     font-size: 2.5em;
     margin: 0;
@@ -85,5 +77,10 @@
     font-size: 0.9em;
 }
 
+
+.rentalimage {
+    width: 117vw;
+    margin-top: 18em;
+}
 
 

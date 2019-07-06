@@ -62,34 +62,34 @@ class AppBar extends React.Component {
     const { selected: { location, weather, home, rental, contactus} } = this.state
     return (
       <div className="app-bar-main-panel">
-        <Link key="locationBtn" to="/location">
+        <Link key="locationBtn" className="icon-link" to="/location">
           <div className="app-bar-icon-wrap location-icon" onClick={() => this.handleSelection('location')}>
             {location ? <LocationColorIcon className="app-bar-icon"/> : <LocationIcon fill="#A4A4A4" className="app-bar-icon"/>}
             <p style={location ? { color:"#1F95B9" } : { color:"#A4A4A4" }} className ="app-bar-desc  location">LOCATION</p>
           </div>
         </Link>
 
-        <Link key="weatherBtn" to="/weather">
+        <Link key="weatherBtn" className="icon-link" to="/weather">
           <div className="app-bar-icon-wrap weather-icon" onClick={() => this.handleSelection('weather')}>
             {weather ? <WeatherColorIcon className="app-bar-icon" /> : <WeatherIcon fill="#A4A4A4" className="app-bar-icon"/>}
             <p style={ weather ? { color:"#1F95B9" } : { color:"#A4A4A4" }} className="app-bar-desc weather">WEATHER</p>
           </div>
         </Link>
 
-        <Link key="homeBtn" to="/" onClick={() => this.handleSelection('home')}>
+        <Link key="homeBtn" className="icon-link" to="/" onClick={() => this.handleSelection('home')}>
           <div className="app-bar-icon-wrap home-icon">
             <img alt="aenona"src={Logo} className="app-bar-icon home-png"></img>
           </div>
         </Link>
 
-        <Link key="rentalBtn" to="/rental">
+        <Link key="rentalBtn" className="icon-link" to="/rental">
           <div className="app-bar-icon-wrap rental-icon" onClick={() => this.handleSelection('rental')}>
             {rental ? <KitesurfColorIcon className="app-bar-icon"/> : <KitesurfIcon fill="#A4A4A4" className="app-bar-icon"/>}
             <p style={ rental ? { color:"#1F95B9" } : { color:"#A4A4A4" }} className="app-bar-desc rental">RENTAL</p>
           </div>
         </Link>
 
-        <Link key="aboutusBtn" to="/aboutus">
+        <Link key="aboutusBtn" className="icon-link" to="/aboutus">
           <div className="app-bar-icon-wrap about-us-icon">
             <AboutusIcon fill="#A4A4A4" className="app-bar-icon" /> 
             <p style={ contactus ? { color:"#1F95B9" } : { color:"#A4A4A4" }} className="app-bar-desc aboutus">ABOUT US</p>

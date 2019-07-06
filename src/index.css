@@ -3,6 +3,7 @@
 @import "./components/MainImage/MainImage.css";
 @import "./components//RentalCard/RentalCard.css";
 @import "./components/pages/weather/weather.css";
+@import "./components/ImageComp/ImageComp.css";
 
 body {
     margin: 0;
@@ -22,6 +23,11 @@ body {
     -webkit-overflow-scrolling: touch;
 } */
 
+
+.test {
+    overflow-y: scroll;
+    height: 100vh;
+}
 .main-wrap-horizontal {
     margin-top: -25em;
     padding-top: 25em;

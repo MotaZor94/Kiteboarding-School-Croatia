@@ -1,0 +1,48 @@
+.ImageComp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* box-shadow: 5px 9px 5px 0px rgba(0,0,0,0.24); */
+    width: 85vw;
+    border-radius: 28px;
+    padding: 1em;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.24);
+
+}
+
+.ImageCompImg {
+    width: 90vw;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+
+}
+
+.image-heading {
+    background-color: white;
+    padding: 1em;
+    margin-top: -2em;
+    margin-left: -7em;
+    border-radius: 18px;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.24);
+    font-weight: bold;
+    color: #656565;
+
+}
+
+.image-desc {
+    text-align: left;
+    color: #656565;
+    font-size: 0.7em;
+
+}
+
+.contactus {
+    background-color: #06bbf3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1em;
+    font-weight: bold;
+    margin-left: 16em;
+
+}

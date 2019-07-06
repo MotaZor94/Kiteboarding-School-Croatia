@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import MainImage from '../MainImage/MainImage'
 import weatherLogic from '../pages/weather/weatherForecastLogic'
+import RentalImage from '../../images/Kitesurfing1.png'
 
 class HeroSection extends Component {
     constructor(props) {
@@ -29,6 +30,13 @@ class HeroSection extends Component {
                 ? <MainImage /> 
                 : null
                 }
+                {pathname === '/rental'
+                ? <>
+                    <img className="rentalimage" src={RentalImage}></img>
+                </>
+                : null
+                }
+
             </div>}
             </>
         )

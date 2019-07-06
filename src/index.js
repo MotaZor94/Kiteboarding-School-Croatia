@@ -17,10 +17,14 @@ import MainIllustration from './components/MainIllustration/MainIllustration'
 
 const App = () => {
   
+  window.addEventListener("scroll",() => {
+    console
+  })
 
   return (
     <Router>
       <Route key="appBarComp" path="/" component={AppBar} />
+      <div className="test">
       <Route 
         key="mainImageMain"
         path="/"
@@ -28,12 +32,12 @@ const App = () => {
       />
 
       <SwipeableRoutes className="main-wrap-horizontal">
-        
          <Route key="weatherComp" exact path="/weather" component={Weather} />
          <Route key="mainComp" exact path="/" component={Main} />
          <Route path="/rental" component={Rental} />
         
       </SwipeableRoutes>
+      </div>
     </Router>
   )
 };

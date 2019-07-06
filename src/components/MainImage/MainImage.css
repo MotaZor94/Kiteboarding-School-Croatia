@@ -1,3 +1,7 @@
+.Image-Wrap {
+    margin-top: 3em;
+}
+
 .weather-graphic {
     display: flex;
     flex-direction: column;
@@ -20,7 +24,7 @@
     }
 
     100% {
-        left: 250px;
+        left: 70vw;
     }
 }
 
@@ -31,7 +35,7 @@
     left: 0;
     animation-name: example;
     animation-duration: 15s;
-    animation-iteration-count: 4;
+    animation-iteration-count: infinite;
     transition: linear;
 }
 
@@ -42,7 +46,7 @@
     left: 60px;
     animation-name: example;
     animation-duration: 15s;
-    animation-iteration-count: 4;
+    animation-iteration-count: infinite;
     transition: linear;
 }
 
@@ -53,7 +57,7 @@
     left: 150px;
     animation-name: example;
     animation-duration: 15s;
-    animation-iteration-count: 4;
+    animation-iteration-count: infinite;
     transition: linear;
 }
 
@@ -64,7 +68,7 @@
     left: 40px;
     animation-name: example;
     animation-duration: 15s;
-    animation-iteration-count: 4;
+    animation-iteration-count: infinite;
     transition: linear;
 }
 
@@ -75,7 +79,7 @@
     left: 80px;
     animation-name: example;
     animation-duration: 15s;
-    animation-iteration-count: 4;
+    animation-iteration-count: infinite;
     transition: linear;
 }
 

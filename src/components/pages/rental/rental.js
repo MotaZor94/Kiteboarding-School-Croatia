@@ -5,8 +5,7 @@ export default function rental() {
   return (
     <div className="rentalSection">
         <div className="RentalTitle">
-        <h1>EXCEPTIONAL GEAR</h1>
-        <h2>STUNNING CONDITIONS</h2>
+        <h1>RENTALS WITH ASSISTANCE AND TUTORIAL ON HOW TO KITE</h1>
         <h3>RENTALS WITH ASSISTANCE AND TUTORIAL ON HOW TO KITE</h3>
         </div>
           <RentalCard 
