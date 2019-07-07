@@ -1,10 +1,11 @@
 import React from 'react';
 import weatherLogic from '../weather/weatherForecastLogic'
 
+import WeatherDataPanel from '../../ui/weatherDataPanel/WeatherDataPanel'
 import HourlyWeatherCard from '../../ui/hourlyWeatherCard/HourlyWeatherCard'
 import DailyWeatherCard from '../../ui/dailyWeatherCard/DailyWeatherCard'
 
-import PartlyCloudyDayIcon from '../../../images/weatherIcons/partly-cloudy-day.png'
+// import PartlyCloudyDayIcon from '../../../images/weatherIcons/partly-cloudy-day.png'
 
 class Weather extends React.PureComponent {
   constructor(props) {
@@ -68,10 +69,11 @@ class Weather extends React.PureComponent {
     const { data } = this.state
     let hourly = null
     let daily = null
+    let currently = null
     if (data) {
-      // console.log('data yes', data)
       hourly = data.hourly.data
       daily = data.daily.data
+      currently = data.currently
       // console.log(hourly)
     }
 
@@ -80,6 +82,7 @@ class Weather extends React.PureComponent {
     // const { data } = this.state.data.daily
     return (
       <div className={`weather-panel ${opened}`}>
+        <WeatherDataPanel currently={currently} />
         <div className="wheather-hourly-panel">
           <HourlyWeatherCard hourlyData={hourly} />
         </div>

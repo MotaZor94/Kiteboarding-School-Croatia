@@ -6,6 +6,7 @@
 @import "./components/ImageComp/ImageComp.css";
 @import "./components/ui/hourlyWeatherCard/HourlyWeatherCard.css";
 @import "./components/ui/dailyWeatherCard/DailyWeatherCard.css";
+@import "./components/ui/weatherDataPanel/WeatherDataPanel.css";
 
 body {
     margin: 0;

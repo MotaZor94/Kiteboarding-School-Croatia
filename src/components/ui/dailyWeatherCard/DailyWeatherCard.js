@@ -73,13 +73,8 @@ export default function DailyWeatherCard({ dailyData }) {
     let dailyCards = null
     if (dailyData) {
         dailyCards = dailyData.map((x, i) => {
-            console.log(x)
             const time = new Date(x.time * 1000)
             const day = time.getDay()
-            // const date = time.getDate()
-            // const month = time.getMonth()
-
-            // ((x.temperatureHigh - 32) * (5/9)).toFixed(1)
             
             return (
                 <div className="daily-weather-card">
