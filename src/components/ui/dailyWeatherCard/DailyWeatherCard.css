@@ -1,5 +1,6 @@
 .daily-weather-card {
     width: 95vw;
+    max-width: 700px;
     height: 15vw;
     margin: 10px auto;
     padding: 0 5%;
@@ -30,7 +31,7 @@
 }
 
 .wheather-hourly-icon {
-    height: 4vw;
+    width: 15%;
 }
 
 .daily-weather-temp-max {

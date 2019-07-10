@@ -2,9 +2,9 @@
     width: 100%;
 }
 
-/* .weather-data-first {
-
-} */
+.weather-data-first {
+    text-align: center;
+}
 
 .weather-temp {
     font-size: 8vh;

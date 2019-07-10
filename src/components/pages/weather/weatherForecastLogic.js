@@ -51,8 +51,8 @@ class WeatherForecastLogic{
 
     updateWeather() {
         try {
-            // const data = fetchRequest('http://localhost:5000/darksky');
-            const data = fetchRequest('/darksky');
+            const data = fetchRequest('http://localhost:5000/darksky');
+            // const data = fetchRequest('/darksky');
             return data
         } catch (error) {
             console.log(error);

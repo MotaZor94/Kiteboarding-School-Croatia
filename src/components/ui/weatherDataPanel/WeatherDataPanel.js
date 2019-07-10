@@ -13,16 +13,13 @@ const WeatherDataPanel = ({ currently }) => {
                 <div className="weather-data-first">
                     <span className="weather-temp">{((temperature - 32) * (5/9)).toFixed(1)} C</span>
                     <br />
-                    <span className="weather-state">{icon}</span>
+                    <span className="weather-state">{summary}</span>
                 </div>
 
                 <div className="weather-data-second">        
                     <img className="weather-data-wind-icon" alt="wind-icon" src={WindIcon} />
                     <span className="weather-wind-value">{(windSpeed * .87).toFixed(1)} Knots</span>
                 </div>
-
-                <p className="weahter-data-summary">{summary}</p>
-
             </div>
         )
     }
