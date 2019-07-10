@@ -1,0 +1,27 @@
+.weather-data-panel {
+    width: 100%;
+}
+
+.weather-data-first {
+    text-align: center;
+}
+
+.weather-temp {
+    font-size: 8vh;
+    font-weight: 600;
+}
+
+.weather-state {
+    text-align: center;
+    font-size: 5vh;
+    /* width: 100vw; */
+}
+
+/* .weather-data-second {
+    
+} */
+
+
+.weather-data-wind-icon {
+    width: 50px;
+}

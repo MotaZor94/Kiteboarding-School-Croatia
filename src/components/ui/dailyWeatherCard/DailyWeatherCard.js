@@ -64,30 +64,37 @@ function setColor(index) {
     }
 }
 
+function setDay(index) {
+    const days = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY']
+    return days[index]
+}
+
 export default function DailyWeatherCard({ dailyData }) {
     let dailyCards = null
-    // if (dailyData) {
-        // dailyCards = dailyData.map((x, i) => {
-            // console.log('daily: ', x)
+    if (dailyData) {
+        dailyCards = dailyData.map((x, i) => {
+            const time = new Date(x.time * 1000)
+            const day = time.getDay()
+            
             return (
                 <div className="daily-weather-card">
-                    <div className="daily-weather-date daily-desc">1 August</div>
+                    <div className="daily-weather-date daily-desc">{setDay(day)}</div>
                     <div className="daily-weather-right">
-                        <img className="wheather-hourly-icon" alt="weather-icon" src={ClearNightIcon} />
+                        <img className="wheather-hourly-icon" alt="weather-icon" src={setIcon(x.icon)} />
                         <div 
                             className="daily-weather-temp-max daily-desc">
-                                25.4
-                                <span className="daily-weather-unit daily-desc">C /</span>
+                                {((x.temperatureHigh - 32) * (5/9)).toFixed(1)}
+                                <span className="daily-weather-unit daily-desc">C |</span>
                         </div>
                         <div 
                             className="daily-weather-temp-low daily-desc">
-                                17.0
-                                <span className="daily-weather-unit daily-desc">C</span>
+                                {(x.windSpeed * .87).toFixed(1)}
+                                <span className="daily-weather-unit daily-desc">Knots</span>
                         </div>
                     </div>
                 </div>
             )
-        // })
-    // }
+        })
+    }
     return dailyCards
 }

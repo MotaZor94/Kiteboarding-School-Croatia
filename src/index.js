@@ -16,11 +16,6 @@ import './index.css'
 import MainIllustration from './components/MainIllustration/MainIllustration'
 
 const App = () => {
-  
-  window.addEventListener("scroll",() => {
-    console
-  })
-
   return (
     <Router>
       <Route key="appBarComp" path="/" component={AppBar} />
