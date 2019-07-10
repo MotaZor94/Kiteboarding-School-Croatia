@@ -3,6 +3,8 @@ import Beach from '../../images/mainIllustration/main.png'
 import Cloud from '../../images/mainIllustration/cloud.png'
 import Sun from '../../images/mainIllustration/sun.png'
 import Moon from '../../images/mainIllustration/moon.png'
+import Goodcondition from '../../images/goodcondition.png'
+import Badcondition from '../../images/badcondition.png'
 
 import WeatherForecast from '../pages/weather/weatherForecastLogic'
 
@@ -28,13 +30,15 @@ class MainImage extends Component {
 
     async componentDidMount() {
         const result = await weather.updateWeather()
+        console.log(result)
         // console.log(Math.floor(result.currently.cloudCover * 10) / 2)
         const time = new Date().getHours()
         this.setState({
             ...this.state,
             data: result,
             cloudiness: Math.floor((result.currently.cloudCover * 10) / 2),
-            time
+            time,
+            windSpeed: result.currently.windSpeed
         })
     }
 
@@ -49,13 +53,15 @@ class MainImage extends Component {
 
     moonOrSun() {
         const { time, cloudiness } = this.state
+        const { pathname } = this.props
+
         console.log('moon or sun')
         if (time >= 8 && time < 20) {
             console.log('sun')
-            return <img className="moonOrSun" alt="sunny" src={Sun}></img>
+            return <img style={pathname === '/weather' ? {top:'6em'}: null } className="moonOrSun" alt="sunny" src={Sun}></img>
         } else if (time < 8 || time >= 20 && cloudiness < 4) {
             console.log('moon')
-            return <img className="moonOrSun" alt="sunny" src={Moon}></img>
+            return <img  style={pathname === '/weather' ? {top:'6em'}: null } className="moonOrSun" alt="sunny" src={Moon}></img>
         } else {
             console.log('nada')
             return null
@@ -101,10 +107,18 @@ class MainImage extends Component {
     }
 
     render() {
+        
+        const {pathname} = this.props
+        const {windSpeed} = this.state
+        console.log('windspeeeeeed',this.state.windSpeed)
         // console.log('main image render: ', this.state)
         // console.log('tyyyyyp: ', typeof this.state.cloudiness)
         return (
             <div className="weather-graphic" style={{ filter: this.darkness() }}>
+                {(pathname === '/weather') 
+                ? <div className="kiteboarding-conditions"><h1>Kiteboarding conditions</h1><img src={windSpeed > 9? Goodcondition : Badcondition}></img></div> 
+                : null
+                }
                 {this.moonOrSun()}
                 {this.prepareClouds()}
                 <img className="hero" alt="sunny" src={Beach}></img> 

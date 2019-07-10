@@ -5,6 +5,7 @@ import PartlyCloudyDayIcon from '../../../images/weatherIcons/partly-cloudy-day.
 import RainyIcon from '../../../images/weatherIcons/rainy.png'
 import SleetIcon from '../../../images/weatherIcons/sleet.png'
 import SunnyIcon from '../../../images/weatherIcons/sunny.png'
+import NinImage from '../../../images/NinImage.png'
 
 
 function setIcon(status) {
@@ -69,18 +70,24 @@ function setDay(index) {
     return days[index]
 }
 
+function setBgColor(index) {
+    const colors = ['#EF8181', '#EF9A81', '#EFC081', '#EFE281', '#D1EF81', '#9FEF81', '#81EFC5']
+    return { backgroundColor: `${colors[index]}`, backgroundImage: `url(${NinImage})` }
+}
+
 export default function DailyWeatherCard({ dailyData }) {
     let dailyCards = null
     if (dailyData) {
         dailyCards = dailyData.map((x, i) => {
             const time = new Date(x.time * 1000)
             const day = time.getDay()
-            
+            if (i >= 6) return null
             return (
-                <div className="daily-weather-card">
+                <div className="daily-weather-card" style={setBgColor(i)}>
+                    {/* <img src ={NinImage}></img> */}
                     <div className="daily-weather-date daily-desc">{setDay(day)}</div>
                     <div className="daily-weather-right">
-                        <img className="wheather-hourly-icon" alt="weather-icon" src={setIcon(x.icon)} />
+                        <img className="weather-daily-icon" alt="weather-icon" src={setIcon(x.icon)} />
                         <div 
                             className="daily-weather-temp-max daily-desc">
                                 {((x.temperatureHigh - 32) * (5/9)).toFixed(1)}

@@ -12,9 +12,9 @@
     font-family: 'Open Sans', sans-serif;
     background-color: white;
     box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.25);
-    border-radius: 0px 0px 80px 80px;
+    border-radius: 0px 0px 50px 50px;
     z-index: 20;
-    height: 3em;
+    height: 3.6em;
 }
 .app-bar-icon-wrap {
     display: flex;
@@ -29,30 +29,30 @@
     margin-right: auto;
     left: 0;
     right: 0;
-    top: 2em;
+    top: 2.9em;
     border-radius: 50%;
-    width: 14vw;
+    width: 6em;
     background-color: white;
-    height: 12vw;
+    height: 5em;
     border: 2px solid #28B3DC;
     box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.25);
 }
 .app-bar-icon {
-    width: 3em;
+    width: 4em;
 }
 .home-png {
-    height: 10vw;
-    width: 10vw;
+    height: 3.9em;
+    width: 3.9em;
 }
 .icon-link {
     text-decoration: none;
     color: #A4A4A4;
-    font-size: 2vw;
+    font-size: 0.5em;
     padding-bottom: 1em;
 }
 
 .app-bar-desc {
     margin: 0;
     position: absolute;
-    bottom: 0.2em;
+    bottom: 1em;
 }

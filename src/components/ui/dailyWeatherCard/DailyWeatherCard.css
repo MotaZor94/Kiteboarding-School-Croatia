@@ -1,8 +1,8 @@
 .daily-weather-card {
     width: 95vw;
     max-width: 700px;
-    height: 15vw;
-    margin: 10px auto;
+    height: 4.5em;
+    margin: 3px auto;
     padding: 0 5%;
     border-radius: 2vw;
     display: flex;
@@ -11,6 +11,9 @@
     justify-content: space-between;
     background-color: #F17373;
     box-sizing: border-box;
+    background-position: right;
+    background-size: cover;
+    /* background-image: url('../../../images/NinImage.png'); */
 }
 
 .daily-weather-date {
@@ -28,10 +31,17 @@
 .daily-desc {
     font-size: 4vw;
     font-weight: 600;
+    white-space: nowrap;
 }
 
-.wheather-hourly-icon {
-    width: 15%;
+
+
+.weather-daily-icon {
+    width: 20px;
+    display: block;
+    height: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .daily-weather-temp-max {

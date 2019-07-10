@@ -83,10 +83,14 @@ class Weather extends React.PureComponent {
     return (
       <div className={`weather-panel ${opened}`}>
         <WeatherDataPanel currently={currently} />
+        <div style={{backgroundColor: '#f1f1f1'}}>
+        <h3 className="weather-spacer">HOURLY</h3>
         <div className="wheather-hourly-panel">
           <HourlyWeatherCard hourlyData={hourly} />
         </div>
+        </div>
         <div className="wheater-daily-panel">
+        <h3 className="weather-spacer">DAILY</h3>
           <DailyWeatherCard dailyData={daily} />
         </div>
       </div>

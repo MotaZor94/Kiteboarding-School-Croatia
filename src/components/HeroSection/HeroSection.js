@@ -25,9 +25,9 @@ class HeroSection extends Component {
         return (
             <>
             {info && 
-                <div className={`hero-section ${info}`} >
+                <div className={`hero-section ${info}`} > 
                 {(pathname === '/weather' || pathname === '/') 
-                ? <MainImage /> 
+                ? <MainImage pathname={pathname}/> 
                 : null
                 }
                 {pathname === '/rental'

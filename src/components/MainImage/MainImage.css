@@ -7,7 +7,7 @@
     flex-direction: column;
     position: relative;
     margin-top: 18em;
-    width: 80vw;
+    width: 18.5em;
     z-index: 0;
 }
 
@@ -24,7 +24,7 @@
     }
 
     100% {
-        left: 70vw;
+        left: 11.5em;
     }
 }
 
@@ -82,4 +82,27 @@
     animation-iteration-count: infinite;
     transition: linear;
 }
+
+.kiteboarding-conditions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.kiteboarding-conditions h1 {
+    color: white;
+    width: 7em;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 0.4em;
+
+}
+
+.kiteboarding-conditions img {
+    width: 2em;
+    float: right;
+    margin-bottom: 1em;
+}
+
+
 

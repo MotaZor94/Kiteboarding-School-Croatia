@@ -3,6 +3,8 @@
     flex-direction: row;
     width: 100vw;
     overflow-x: scroll;   
+    margin-bottom: -1em;
+    padding: 1em 0em; 
 }
 
 .wheather-hourly-card-desc {
@@ -21,6 +23,12 @@
     text-align: right;
     margin-top: 20%;
     margin-bottom: 20%;
+}
+
+.weather-spacer {
+    text-align: center;
+    color: #404040;
+    padding-top: 1em;
 }
 
 .wheather-card-hourly-desc-status {
