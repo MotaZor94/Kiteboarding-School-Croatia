@@ -30,8 +30,6 @@ class MainImage extends Component {
 
     async componentDidMount() {
         const result = await weather.updateWeather()
-        console.log(result)
-        // console.log(Math.floor(result.currently.cloudCover * 10) / 2)
         const time = new Date().getHours()
         this.setState({
             ...this.state,
@@ -44,9 +42,11 @@ class MainImage extends Component {
 
     prepareClouds() {
         const { cloudiness } = this.state
+        const { pathname } = this.props
+        const style = pathname === '/weather' ? { top:'7em' } : null
         var clouds = []
         for (let i = 1; i <= cloudiness; i++) {
-            clouds.push(<img className={`cloud${i}`} alt="cloud" src={Cloud}></img>)
+            clouds.push(<img className={`cloud${i}`} alt="cloud" src={Cloud} style={style}></img>)
         }
         return clouds
     }
@@ -54,14 +54,15 @@ class MainImage extends Component {
     moonOrSun() {
         const { time, cloudiness } = this.state
         const { pathname } = this.props
+        const style = pathname === '/weather' ? { top:'6em' } : null
 
         console.log('moon or sun')
         if (time >= 8 && time < 20) {
             console.log('sun')
-            return <img style={pathname === '/weather' ? {top:'6em'}: null } className="moonOrSun" alt="sunny" src={Sun}></img>
+            return <img style={style} className="moonOrSun" alt="sunny" src={Sun}></img>
         } else if (time < 8 || time >= 20 && cloudiness < 4) {
             console.log('moon')
-            return <img  style={pathname === '/weather' ? {top:'6em'}: null } className="moonOrSun" alt="sunny" src={Moon}></img>
+            return <img  style={style} className="moonOrSun" alt="sunny" src={Moon}></img>
         } else {
             console.log('nada')
             return null

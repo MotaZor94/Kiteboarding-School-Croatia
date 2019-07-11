@@ -83,8 +83,7 @@ export default function DailyWeatherCard({ dailyData }) {
             const day = time.getDay()
             if (i >= 6) return null
             return (
-                <div className="daily-weather-card" style={setBgColor(i)}>
-                    {/* <img src ={NinImage}></img> */}
+                <div key={i} className="daily-weather-card" style={setBgColor(i)}>
                     <div className="daily-weather-date daily-desc">{setDay(day)}</div>
                     <div className="daily-weather-right">
                         <img className="weather-daily-icon" alt="weather-icon" src={setIcon(x.icon)} />

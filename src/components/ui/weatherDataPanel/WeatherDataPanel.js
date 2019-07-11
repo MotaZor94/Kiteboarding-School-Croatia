@@ -2,7 +2,6 @@ import React from 'react'
 import WindIcon from '../../../images/icons/wind.png'
 
 const WeatherDataPanel = ({ currently }) => {
-    console.log(currently)
     let weatherDataPanel = null
     if (currently) {
         const { windSpeed, temperature, summary, icon } = currently

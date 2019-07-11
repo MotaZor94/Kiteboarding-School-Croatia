@@ -30,7 +30,7 @@
 
 .cloud1 {
     position: absolute;
-    width: 100px;
+    width: 80px;
     top: 0;
     left: 0;
     animation-name: example;
@@ -41,7 +41,7 @@
 
 .cloud2 {
     position: absolute;
-    width: 100px;
+    width: 80px;
     top: 10px;
     left: 60px;
     animation-name: example;
@@ -52,7 +52,7 @@
 
 .cloud3 {
     position: absolute;
-    width: 100px;
+    width: 80px;
     top: 0;
     left: 150px;
     animation-name: example;
@@ -63,7 +63,7 @@
 
 .cloud4 {
     position: absolute;
-    width: 100px;
+    width: 80px;
     top: 0;
     left: 40px;
     animation-name: example;
@@ -74,7 +74,7 @@
 
 .cloud5 {
     position: absolute;
-    width: 100px;
+    width: 80px;
     top: 0;
     left: 80px;
     animation-name: example;
