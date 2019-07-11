@@ -9,7 +9,6 @@ const WeatherDataPanel = ({ currently }) => {
         weatherDataPanel = (
             <div className="weather-data-panel">
                 <div className="weather-data-first">
-                    <h3 className="weather-data-panel-current">CURRENTLY</h3>
                     <span className="weather-temp">{((temperature - 32) * (5/9)).toFixed(1)}&#8451;</span>
                     <br />
                     <span className="weather-state">{summary}</span>

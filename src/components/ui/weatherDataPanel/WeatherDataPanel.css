@@ -1,37 +1,38 @@
 .weather-data-panel {
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: 1em;
     margin-bottom: 2em;
 }
 
 .weather-data-first {
-    text-align: center;
+    text-align: left;
     color: #404040;
 }
 
 .weather-temp {
-    font-size: 3.3em;
+    font-size: 3.5em;
     font-weight: 700;
 }
 
 .weather-state {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 0.8em;
     margin-top: -0.2em;
-    font-weight: bold;
-    text-transform: uppercase;
-
+    font-weight: 300;
 }
 
 .weather-data-second {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 
 .weather-data-wind-icon {
-    width: 50px;
+    width: 20px;
 }
 
 .weather-data-panel-current {
@@ -40,6 +41,6 @@
 
 .weather-wind-value {
     color: #404040;
-    text-transform: uppercase;
-    font-weight: bold;
+    font-size: 12.8px;
+    font-weight: 300;
 }

@@ -66,13 +66,8 @@ function setColor(index) {
 }
 
 function setDay(index) {
-    const days = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY']
+    const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     return days[index]
-}
-
-function setBgColor(index) {
-    const colors = ['#EF8181', '#EF9A81', '#EFC081', '#EFE281', '#D1EF81', '#9FEF81', '#81EFC5']
-    return { backgroundColor: `${colors[index]}`, backgroundImage: `url(${NinImage})` }
 }
 
 export default function DailyWeatherCard({ dailyData }) {
@@ -83,19 +78,19 @@ export default function DailyWeatherCard({ dailyData }) {
             const day = time.getDay()
             if (i >= 6) return null
             return (
-                <div key={i} className="daily-weather-card" style={setBgColor(i)}>
+                <div key={i} className="daily-weather-card" >
                     <div className="daily-weather-date daily-desc">{setDay(day)}</div>
                     <div className="daily-weather-right">
                         <img className="weather-daily-icon" alt="weather-icon" src={setIcon(x.icon)} />
                         <div 
                             className="daily-weather-temp-max daily-desc">
                                 {((x.temperatureHigh - 32) * (5/9)).toFixed(1)}
-                                <span className="daily-weather-unit daily-desc">C |</span>
+                                <span className="daily-weather-unit daily-desc">C <div className='line'></div> </span>
                         </div>
                         <div 
                             className="daily-weather-temp-low daily-desc">
                                 {(x.windSpeed * .87).toFixed(1)}
-                                <span className="daily-weather-unit daily-desc">Knots</span>
+                                <span className="daily-weather-unit daily-desc"> Knots</span>
                         </div>
                     </div>
                 </div>
