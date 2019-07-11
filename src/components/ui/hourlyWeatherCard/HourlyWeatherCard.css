@@ -18,10 +18,9 @@
 .wheather-hourly-icon {
     display: block;
     color: #7b7b7b;
-    height: 18px;
+    height: 24px;
     margin-top: 2%;
     margin-bottom: 2%;
-    filter: contrast(0.5);
 }
 
 .weather-hourly-temperature {
