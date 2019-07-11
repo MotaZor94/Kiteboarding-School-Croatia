@@ -22,6 +22,7 @@ class HeroSection extends Component {
     render() {
         const { location: { pathname } } = this.props
         const { info } = this.state
+        console.log('info:', info)
         return (
             <>
             {info && 
