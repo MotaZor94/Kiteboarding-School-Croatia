@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import SwipeableRoutes from 'react-swipeable-routes';
 
 import Main from './components/pages/main/main'
-import Weather from './components/pages/weather/weather'
+import Weather from './components/pages/weather/Weather'
 import Rental from './components/pages/rental/rental'
 import AppBar from './components/AppBar/AppBar'
 // import MainImage from './components/MainImage/MainImage'

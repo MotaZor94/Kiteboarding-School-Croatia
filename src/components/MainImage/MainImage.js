@@ -46,7 +46,7 @@ class MainImage extends Component {
         const style = pathname === '/weather' ? { top:'7em' } : null
         var clouds = []
         for (let i = 1; i <= cloudiness; i++) {
-            clouds.push(<img className={`cloud${i}`} alt="cloud" src={Cloud} style={style}></img>)
+            clouds.push(<img key={`cloud${i}`} className={`cloud${i}`} alt="cloud" src={Cloud} style={style}></img>)
         }
         return clouds
     }
@@ -111,9 +111,6 @@ class MainImage extends Component {
         
         const {pathname} = this.props
         const {windSpeed} = this.state
-        console.log('windspeeeeeed',this.state.windSpeed)
-        // console.log('main image render: ', this.state)
-        // console.log('tyyyyyp: ', typeof this.state.cloudiness)
         return (
             <div className="weather-graphic" style={{ filter: this.darkness() }}>
                 {(pathname === '/weather') 

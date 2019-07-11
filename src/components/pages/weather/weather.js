@@ -1,5 +1,5 @@
 import React from 'react';
-import weatherLogic from '../weather/weatherForecastLogic'
+import weatherLogic from './weatherForecastLogic'
 
 import WeatherDataPanel from '../../ui/weatherDataPanel/WeatherDataPanel'
 import HourlyWeatherCard from '../../ui/hourlyWeatherCard/HourlyWeatherCard'
@@ -18,7 +18,6 @@ class Weather extends React.PureComponent {
       dailyCards: false
     };
 
-    // this.prepareWheaterHourly = this.prepareWheaterHourly.bind(this)
     this.prepareWeatherDaily = this.prepareWeatherDaily.bind(this)
   }
 
@@ -59,12 +58,7 @@ class Weather extends React.PureComponent {
 
   render() {
     const { location: { pathname } } = this.props
-
-    let opened = null
-    if (pathname === '/weather') {
-      console.log(pathname)
-      opened = 'opened'
-    }
+    const opened = pathname === '/weather' ? 'opened' : null
 
     const { data } = this.state
     let hourly = null
@@ -74,23 +68,19 @@ class Weather extends React.PureComponent {
       hourly = data.hourly.data
       daily = data.daily.data
       currently = data.currently
-      // console.log(hourly)
     }
 
-    // console.log('sending', daily)
-
-    // const { data } = this.state.data.daily
     return (
       <div className={`weather-panel ${opened}`}>
         <WeatherDataPanel currently={currently} />
         <div style={{backgroundColor: '#f1f1f1'}}>
-        <h3 className="weather-spacer">HOURLY</h3>
-        <div className="wheather-hourly-panel">
-          <HourlyWeatherCard hourlyData={hourly} />
-        </div>
+          <h3 className="weather-spacer">HOURLY</h3>
+          <div className="wheather-hourly-panel">
+            <HourlyWeatherCard hourlyData={hourly} />
+          </div>
         </div>
         <div className="wheater-daily-panel">
-        <h3 className="weather-spacer">DAILY</h3>
+          <h3 className="weather-spacer">DAILY</h3>
           <DailyWeatherCard dailyData={daily} />
         </div>
       </div>
