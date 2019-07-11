@@ -26,7 +26,8 @@ background: -moz-linear-gradient(left, #5764ff 0%, #68b3fd 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(left, #5764ff 0%,#68b3fd 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to right, #5764ff 0%,#68b3fd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5764ff', endColorstr='#68b3fd',GradientType=1 ); /* IE6-9 */
-width: 78vw;
+width: 90vw;
+max-width: 600px;
 height: 8em;
 position: relative;
 border-radius: 30px;
@@ -40,7 +41,7 @@ box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.15);
     position: absolute;
     left: 6vw;
     color: white;
-    top: 8vh;
+    top: 35%;
     font-size: 1.4em;
     z-index: 21;
 }
@@ -49,7 +50,7 @@ box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.15);
     color: white;
     font-size: 1.4em;
     left: 6vw;
-    top: 4vh;
+    top: 15%;
     position: absolute;
     z-index: 21;
 }
@@ -63,13 +64,14 @@ box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.15);
     margin: 0;
     position: absolute;
     left: 6vh;
-    padding: 0.1em;
+    padding: 0.2em;
     z-index: 21;
 }
 
 .price {
     position: absolute;
     right: 4vh;
+    top: 35%;
     bottom: 0;
     color: white;
     font-size: 1.1em;
@@ -88,7 +90,7 @@ box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.15);
     position: absolute;
     right: 0vh;
     font-size: 1em;
-    top: 26px;
+    top: 30%;
     color: white;
     background-color: #0B1C9F;
     border: none;

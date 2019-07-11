@@ -1,7 +1,10 @@
 .daily-weather-card {
+    font-weight: 300;
+    font-size: 4vw;
+    color: #7b7b7b;
     width: 95vw;
     max-width: 700px;
-    height: 4.5em;
+    height: 2.5em;
     margin: 3px auto;
     padding: 0 5%;
     border-radius: 2vw;
@@ -9,7 +12,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #F17373;
     box-sizing: border-box;
     background-position: right;
     background-size: cover;
@@ -17,7 +19,7 @@
 }
 
 .daily-weather-date {
-    font-weight: 600;
+    /* font-weight: 300; */
 }
 
 .daily-weather-right {
@@ -29,8 +31,9 @@
 }
 
 .daily-desc {
-    font-size: 4vw;
-    font-weight: 600;
+    
+    /* font-weight: 300; */
+    display: flex;
     white-space: nowrap;
 }
 
@@ -42,18 +45,27 @@
     height: 20px;
     margin-top: 2%;
     margin-bottom: 2%;
+    padding-right: 1em;
 }
 
 .daily-weather-temp-max {
 
 }
 
-.daily-weather-temp-low {
-    color: #4E4E4E;
-    opacity: 0.7;
+.line {
+    border-right: 1px solid grey;
+    width: 9px;
+    height: 17px;
+    margin-right: 6px;
 }
 
-.daily-weather-unit {
+.daily-weather-temp-low {
+    /* color: #4E4E4E; */
+    /* opacity: 0.7; */
+}
+
+.daily-weather-unit span {
+    padding-bottom: 0.2em;
 
 }
 

@@ -1,43 +1,39 @@
 .weather-hourly-card {
+    color: #7b7b7b;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
-    border: 3px rgb(75, 75, 75) solid;
-    min-width: 70px;
+    min-width: 54px;
     margin-left: 10px;
-    -webkit-box-shadow: -2px 3px 61px -34px rgba(0,0,0,0.75);
-    -moz-box-shadow: -2px 3px 61px -34px rgba(0,0,0,0.75);
-    box-shadow: -2px 3px 61px -34px rgba(0,0,0,0.75);
-    
 }
 
 .weather-hourly-time {
-    /* font-size: .7em; */
-    color: rgb(83, 83, 83);
+    /* color: rgb(83, 83, 83); */
     margin-top: 2%;
-    margin-bottom: 0.1em;
-    font-weight: bold;
+    margin-bottom: 0.6em;
+    font-weight: 300;
 }
 
 .wheather-hourly-icon {
     display: block;
-    height: 30px;
+    color: #7b7b7b;
+    height: 18px;
     margin-top: 2%;
     margin-bottom: 2%;
     filter: contrast(0.5);
 }
 
 .weather-hourly-temperature {
-    color: #404040;
-    font-weight: bold;
-    margin-top: 2%;
-    margin-bottom: -5px;
+    font-size: .7em;
+    font-weight: 300;
+    margin-top: 10%;
+    margin-bottom: 1px;
 }
 
 .weather-hourly-knots {
-    color: #404040;
     font-size: .7em;
+    font-weight: 300;
     margin-top: 2%;
     margin-bottom: 2%;
 }
@@ -50,11 +46,10 @@
 }
 
 .weather-hrouly-windSpeed {
-    color:  #404040;
-    font-weight: bold;
+    font-weight: 300;
     margin-top: 2%;
     margin-bottom: 2%;
-    font-size: 0.7em;
+    font-size: .7em;
 }
 
 
