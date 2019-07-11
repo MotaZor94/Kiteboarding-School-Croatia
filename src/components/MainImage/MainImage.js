@@ -57,7 +57,7 @@ class MainImage extends Component {
         const style = pathname === '/weather' ? { top:'6em' } : null
 
         console.log('moon or sun')
-        if (time >= 8 && time < 20) {
+        if (time >= 8 && time < 20 && cloudiness < 4) {
             console.log('sun')
             return <img style={style} className="moonOrSun" alt="sunny" src={Sun}></img>
         } else if (time < 8 || time >= 20 && cloudiness < 4) {
