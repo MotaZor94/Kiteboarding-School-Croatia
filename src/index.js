@@ -11,8 +11,6 @@ import AppBar from './components/AppBar/AppBar'
 import HeroSection from './components/HeroSection/HeroSection'
 import './index.css'
 
-import MainIllustration from './components/MainIllustration/MainIllustration'
-
 const App = () => {
   return (
     <Router>
