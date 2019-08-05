@@ -1,5 +1,5 @@
 import React from 'react';
-import RentalCard from '../../RentalCard/RentalCard'
+import RentalCard from '../../ui/RentalCard/RentalCard'
 
 const rentalCardConfig = [
   {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import KiteImage from '../../images/icons/kitesurf.svg'
+import KiteImage from '../../../images/icons/kitesurf.svg'
 
 export default class RentalCard extends Component {
     constructor(props) {
