@@ -50,7 +50,6 @@ export default function HourlyWeatherCard({ hourlyData }) {
               <div className="weather-hourly-time">{hour}</div>
               <img className="wheather-hourly-icon" alt="weather-icon" src={setIcon(x.icon)} />
               <div className="weather-hourly-temperature">{((x.temperature - 32) * (5/9)).toFixed(1)}C</div>
-              {/* <div className="weather-hourly-windSpeedDesc">wind speed</div> */}
               <div className="weather-hrouly-windSpeed">{(x.windSpeed * .87).toFixed(1)} <span className='weather-hourly-knots'>knots</span></div>
             </div>
         )
