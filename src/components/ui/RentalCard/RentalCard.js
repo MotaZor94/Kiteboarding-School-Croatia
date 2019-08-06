@@ -21,7 +21,6 @@ export default class RentalCard extends Component {
 
             case 'Beginner/Intermediate':
                 return { backgroundImage: 'linear-gradient(to right, #45ebcb, #EBE545)'}
-                
 
             case 'Beginner/Advanced':
                 return { backgroundImage: 'linear-gradient(to right, #45ebcb, #EB5245)'}
@@ -54,6 +53,24 @@ export default class RentalCard extends Component {
                 <div className="level" style={this.setColor(level)}>{level}</div>
                 <div className="price">{price}</div>
                 <a href={`mailto:ivan@magas.com?Subject=${heading1} ${heading2} rental`} target="_top"><button className="button">{booknow}</button></a>
+            </div>
+
+            <div className="rentalCard">
+                <div className="upperRental">
+                    <div className="leftUpperRental">
+                        <div className="leftUpperUpperRental">
+                            <span className="titleRentalCard">{`2 Hours Land Rental`}</span>
+                            <span className="typeRentalCard">{`Trainer Kite`}</span>
+                        </div>
+                        <div className="leftUpperLowerRental">
+                            <span className="durationRentalCard">{`(2-3 days, 2-3 hours each)`}</span>
+                        </div>
+                    </div>
+                    <div className="rightUpperRental">
+                        <span>{`$${price}`}</span>
+                    </div>
+                </div>
+                <div className="lowerRental"></div>
             </div>
         )
     } 

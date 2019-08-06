@@ -20,15 +20,15 @@
     width: 90vw;
     max-width: 600px;
     height: 8em;
-    position: relative;
+    /* position: relative; */
     border-radius: 6px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     margin-top: 1em;
     box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.15);
 }
 
 .heading1 {
-    position: absolute;
+    /* position: absolute; */
     left: 6vw;
     top: 35%;
     font-size: 1.4em;
@@ -39,7 +39,7 @@
     font-size: 1.4em;
     left: 6vw;
     top: 15%;
-    position: absolute;
+    /* position: absolute; */
     z-index: 21;
 }
 
@@ -49,31 +49,22 @@
     border-radius: 0px 0px 10px 10px;
     font-size: 1.2em;
     margin: 0;
-    position: absolute;
+    /* position: absolute; */
     left: 6vh;
     padding: 0.2em;
     z-index: 21;
 }
 
 .price {
-    position: absolute;
+    /* position: absolute; */
     right: 4vh;
     top: 35%;
     bottom: 0;
     font-size: 1.1em;
 }
 
-.CardImage {
-    width: 9em;
-    height: 8em;
-    position: absolute;
-    top: 0;
-    right: 11vw;
-    opacity: 0.1;
-}
-
 .button {
-    position: absolute;
+    /* position: absolute; */
     right: 0vh;
     font-size: 1em;
     top: 30%;
