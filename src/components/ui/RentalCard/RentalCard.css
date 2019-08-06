@@ -59,7 +59,9 @@
 }
 
 .lowerRental {
+    margin: 0 auto;
     margin-top: 15px;
+    max-width: 350px;
 }
 
 .descriptionRentalCard {
