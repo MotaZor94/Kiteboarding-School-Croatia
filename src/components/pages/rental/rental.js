@@ -14,15 +14,15 @@ export default class rental extends Component {
             heading2:"Trainer Kite",
             desc: "for absolute beginners in kite flying",
             level:"Beginner",
-            price:"110 Euro",
+            price:"110",
         },
         {
-            heading1: '6 Hours Water 1 Rental',
+            heading1: '6 Hours Water Rental',
             heading2: '4 Liner Kite',
-            desc: "setting up the equipment, kite control, upwind and downwind bodydrag, first time on the board, self rescue",
+            desc: "kite control, upwind and downwind bodydrag, first time on the board, self rescue",
             duration: "(2-3 days, 2-3 hours each)",
             level: 'Advanced',
-            price: '340 Euro',
+            price: '340',
         },
         {
             heading1: '6 Hours Water 2 Rental',
@@ -30,7 +30,7 @@ export default class rental extends Component {
             desc: 'how to upwind, do transitions, first pop',
             duration: '(2-3 days, 2-3 hours each)',
             level: 'Advanced',
-            price: '395 Euro',
+            price: '395',
         },
         {
             heading1: '8 Hours Land and Water Rental',
@@ -38,7 +38,7 @@ export default class rental extends Component {
             desc: 'from beginner to intermediate level kiteboarding skills',
             duration: '(2-4 days, 2-3 hours each)',
             level: 'Beginner/Intermediate',
-            price: '450 Euro',
+            price: '450',
         },
         {
             heading1: '12 Hours ALL IN Rental',
@@ -46,7 +46,7 @@ export default class rental extends Component {
             desc: 'from beginner to advanced riding how to upwind, do transitions, first pop',
             duration: '(for a whole week of fun time)',
             level: 'Beginner/Advanced',
-            price: '595 Euro',
+            price: '595',
         },
       ]
     }
@@ -68,6 +68,8 @@ export default class rental extends Component {
         className="rentalCard"
         heading1={x.heading1}
         heading2={x.heading2}
+        desc={x.desc}
+        duration={x.duration}
         level={x.level}
         price={x.price}
         booknow="BOOK NOW"
@@ -86,7 +88,6 @@ export default class rental extends Component {
     return (
       <div className={`rentalSection ${opened}`}>
         <div className="RentalTitle">
-          {/* <RentalCategorySelector setDifficulty={this.setSelectedDifficutly} selected={selectedDifficulty}/> */}
           <h3>RENTALS WITH ASSISTANCE AND TUTORIAL ON HOW TO KITE</h3>
         </div>
           {this.generateRentalCards()}

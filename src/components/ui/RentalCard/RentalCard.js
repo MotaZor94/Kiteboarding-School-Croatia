@@ -32,6 +32,8 @@ export default class RentalCard extends Component {
             heading1,
             heading2,
             level,
+            desc,
+            duration,
             price,
             booknow
         } = this.props
@@ -45,32 +47,29 @@ export default class RentalCard extends Component {
         }
 
 
+        // <a href={`mailto:ivan@magas.com?Subject=${heading1} ${heading2} rental`} target="_top"><button className="button">{booknow}</button></a>
 
         return (
-            <div className="RentalCard">
-                <div className="heading1">{heading1}</div>
-                <div className="heading2">{heading2}</div>
-                <div className="level" style={this.setColor(level)}>{level}</div>
-                <div className="price">{price}</div>
-                <a href={`mailto:ivan@magas.com?Subject=${heading1} ${heading2} rental`} target="_top"><button className="button">{booknow}</button></a>
-            </div>
-
             <div className="rentalCard">
                 <div className="upperRental">
+
                     <div className="leftUpperRental">
                         <div className="leftUpperUpperRental">
-                            <span className="titleRentalCard">{`2 Hours Land Rental`}</span>
-                            <span className="typeRentalCard">{`Trainer Kite`}</span>
+                            <span className="titleRentalCard">{heading1}</span>
+                            <span className="typeRentalCard">{heading2}</span>
                         </div>
                         <div className="leftUpperLowerRental">
-                            <span className="durationRentalCard">{`(2-3 days, 2-3 hours each)`}</span>
+                            <span className="durationRentalCard">{duration}</span>
                         </div>
                     </div>
                     <div className="rightUpperRental">
-                        <span>{`$${price}`}</span>
+                        <span className="priceRentalCard">{`€${price}`}</span>
                     </div>
+
                 </div>
-                <div className="lowerRental"></div>
+                <div className="lowerRental">
+                    <span className="descriptionRentalCard">{desc}</span>
+                </div>
             </div>
         )
     } 

@@ -16,81 +16,52 @@
     margin: 0 auto;
 } 
 
-.RentalCard {
+.rentalCard {
     width: 90vw;
     max-width: 600px;
-    height: 8em;
-    /* position: relative; */
+    /* height: 8em; */
+    padding: 5px;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-radius: 6px;
-    /* margin: 0 auto; */
+    margin: 5px auto;
     margin-top: 1em;
     box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.15);
 }
 
-.heading1 {
-    /* position: absolute; */
-    left: 6vw;
-    top: 35%;
-    font-size: 1.4em;
-    z-index: 21;
+.upperRental {
+    display: flex;
+    justify-content: space-between;
 }
 
-.heading2 {
-    font-size: 1.4em;
-    left: 6vw;
-    top: 15%;
-    /* position: absolute; */
-    z-index: 21;
+.leftUpperUpperRental {
+    display: flex;
+    flex-direction: column;
 }
 
-.level {
-    background-color: #45EBCB;
-    display: inline-block;
-    border-radius: 0px 0px 10px 10px;
-    font-size: 1.2em;
-    margin: 0;
-    /* position: absolute; */
-    left: 6vh;
-    padding: 0.2em;
-    z-index: 21;
+.typeRentalCard {
+    color: rgb(150, 148, 148);
 }
 
-.price {
-    /* position: absolute; */
-    right: 4vh;
-    top: 35%;
-    bottom: 0;
-    font-size: 1.1em;
+.rightUpperRental {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.button {
-    /* position: absolute; */
-    right: 0vh;
-    font-size: 1em;
-    top: 30%;
+.priceRentalCard {
+    background-color: rgb(0, 153, 255);
     color: white;
-    background-color: #0B1C9F;
-    border: none;
-    padding: 0.5em;
-    border-top-left-radius: 9px;
-    border-bottom-left-radius: 9px;
+    border-radius: 20px;
+    padding: 2px 8px;
 }
 
+.lowerRental {
+    margin-top: 15px;
+}
 
-@media all and (max-width:380px) {
-    .heading1 {
-        position: absolute;
-        left: 6vw;
-        top: 8vh;
-        font-size: 1.1em;
-        z-index: 21;
-    }
-    
-    .heading2 {
-        font-size: 1.1em;
-        left: 6vw;
-        top: 4vh;
-        position: absolute;
-        z-index: 21;
-    }
+.descriptionRentalCard {
+    font-size: .9em;
 }
