@@ -9,21 +9,15 @@ export default class RentalCard extends Component {
     }
 
     setColor(level) {
-        switch (level) {
-            case 'Beginner':
+        switch (level.index) {
+            case 0:
                 return { backgroundColor:"#45ebcb" }
 
-            case 'Advanced':
+            case 1:
                 return { backgroundColor:"#EB5245" }
 
-            case 'Intermediate':
+            case 2:
                 return { backgroundColor:"#EBE545" }
-
-            case 'Beginner/Intermediate':
-                return { backgroundImage: 'linear-gradient(to right, #45ebcb, #EBE545)'}
-
-            case 'Beginner/Advanced':
-                return { backgroundImage: 'linear-gradient(to right, #45ebcb, #EB5245)'}
         }
     }
 
@@ -37,16 +31,6 @@ export default class RentalCard extends Component {
             price,
             booknow
         } = this.props
-        let color = "";
-        if(level === "Beginner") {
-            color = "#45ebcb";
-        } else if (level === "Advanced") {
-            color = "#EBE545";
-        } else if (level === "Intermediate"){
-            color = "#EB5245";
-        }
-
-
         // <a href={`mailto:ivan@magas.com?Subject=${heading1} ${heading2} rental`} target="_top"><button className="button">{booknow}</button></a>
 
         return (

@@ -12,21 +12,21 @@ export default function RentalCategorySelector({ selected, setDifficulty }) {
         <div className="rentalDifficultySelectorWrap">
             <div 
               className="difficultySection"
+              onClick={() => setDifficulty(0)}
+            >
+                <img alt="icon" src={selected == 0 ? baby : babybw}></img>
+            </div>
+            <div 
+              className="difficultySection"
               onClick={() => setDifficulty(1)}
             >
-                <img alt="icon" src={selected == 1 ? baby : babybw}></img>
+                <img alt="icon" src={selected == 1 ? strong : strongbw}></img>
             </div>
             <div 
               className="difficultySection"
               onClick={() => setDifficulty(2)}
             >
-                <img alt="icon" src={selected == 2 ? strong : strongbw}></img>
-            </div>
-            <div 
-              className="difficultySection"
-              onClick={() => setDifficulty(3)}
-            >
-                <img alt="icon" src={selected == 3 ? skull : skullbw}></img>
+                <img alt="icon" src={selected == 2 ? skull : skullbw}></img>
             </div>
         </div>
     )
